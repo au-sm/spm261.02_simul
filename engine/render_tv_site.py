@@ -1,0 +1,417 @@
+"""
+Renders tv-site/index.html -- the standalone Local TV Rights
+Marketplace, the missing sibling to sponsorship-site/index.html. Same
+purpose: a live status page plus a client-side negotiation simulator
+students can rehearse on before their real negotiation locks a rate in.
+
+Reads data/local_tv_deals.json (market tier + base rate/clause +
+negotiated rate/clause once resolved) and data/league_config.json
+(team names/owners) -- always current, never hand-typed. Simulator
+math mirrors engine/negotiation.py's revenue AND clause axes exactly,
+the same two-axis simulator as the Sponsorship Marketplace -- see the
+Rulebook's TV / Broadcast Revenue section.
+
+Run after every resolve_local_tv_pick.py call, then republish.
+"""
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from site_nav import NAV_CSS, render_nav
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def load_json(name):
+    with open(os.path.join(BASE, "data", name)) as f:
+        return json.load(f)
+
+
+def money(n):
+    return f"${n:,}"
+
+
+def render(config, deals, ltv):
+    tv_deal_formula = deals["tv_deal_formula"]
+    ce = deals["clause_enforcement"]
+    rt = ce["rank_threshold_by_clause"]
+    owner_by_id = {t["team_id"]: t.get("owner", "") for t in config["teams"]}
+    assignments = ltv["assignments"]
+
+    tier_rows = []
+    for tier in ltv["market_tiers"]:
+        tier_rows.append(
+            f'<tr><td>{tier["tier"]}</td><td>{tier["base_clause"]}</td></tr>'
+        )
+    tier_rows_html = "".join(tier_rows)
+
+    # Deliberately no revenue/rate column here, for a pending OR an already-
+    # negotiated team alike -- mirrors the Sponsorship Marketplace's Team
+    # Progress table, which never reveals a dollar figure either. Real price
+    # numbers stay off every public page; only tier, clause, and status are
+    # shown. (The practice simulator further down is the one deliberate,
+    # already-established exception -- it's a rehearsal tool, not a leak.)
+    team_rows = []
+    for a in sorted(assignments, key=lambda a: a["team_id"]):
+        owner = owner_by_id.get(a["team_id"], "")
+        name = a["team_name"] + (f" ({owner})" if owner else "")
+        negotiated = a.get("negotiated")
+        if negotiated:
+            clause = a.get("final_clause", a["base_clause"])
+            status_cls = "complete"
+            status = a["mode"]
+        else:
+            clause = a["base_clause"]
+            status_cls = "pending"
+            status = "pending"
+        team_rows.append(
+            f'<tr><td>{name}</td><td>{a["market_tier"]}</td><td>{clause}</td>'
+            f'<td class="num status-{status_cls}">{status}</td></tr>'
+        )
+    team_rows_html = "".join(team_rows)
+
+    # Practice simulator no longer draws from real catalog data at all --
+    # first it leaked real teams' prices by name (assignments), then even
+    # the fixed-up generic-tier version leaked real tier prices, which
+    # combine with the Team Status table's still-public tier NAME per team
+    # to reconstruct the exact same leak. The only version with no leak
+    # vector left is one that never embeds a real number anywhere: the
+    # simulator now takes a student-entered hypothetical base price/clause.
+
+    return f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TV Rights Marketplace</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/submissions.css">
+<style>
+:root{{
+  --paper:#eef2ea; --ink:#16201a; --muted:#5b6b5e; --line:#d6decd;
+  --accent:#b8811f; --accent-ink:#3a2a08; --pitch:#2f5233; --pitch-ink:#eef2ea;
+  --navy:#223a5e; --navy-ink:#eef2ea; --surface:#f7f9f4;
+  --win:#2f7a4f; --loss:#b4472f; --draw:#a5791f;
+  --shadow: 0 1px 2px rgba(22,32,26,.06), 0 4px 14px rgba(22,32,26,.05);
+}}
+@media (prefers-color-scheme: dark){{
+  :root:not([data-theme="light"]){{
+    --paper:#111611; --ink:#e7ece1; --muted:#93a091; --line:#2a352a;
+    --accent:#d9a44a; --accent-ink:#1c1404; --pitch:#4c7a52; --pitch-ink:#0d130e;
+    --navy:#4a6693; --navy-ink:#0d130e; --surface:#171d17;
+    --win:#4fae76; --loss:#e07a5c; --draw:#d1a13e;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 18px rgba(0,0,0,.35);
+  }}
+}}
+:root[data-theme="dark"]{{
+    --paper:#111611; --ink:#e7ece1; --muted:#93a091; --line:#2a352a;
+    --accent:#d9a44a; --accent-ink:#1c1404; --pitch:#4c7a52; --pitch-ink:#0d130e;
+    --navy:#4a6693; --navy-ink:#0d130e; --surface:#171d17;
+    --win:#4fae76; --loss:#e07a5c; --draw:#d1a13e;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 18px rgba(0,0,0,.35);
+}}
+*{{box-sizing:border-box;}}
+body{{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;line-height:1.5;}}
+.mono{{font-family:"IBM Plex Mono",ui-monospace,monospace;}}
+h1,h2,h3{{font-family:"Big Shoulders Display",sans-serif;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance;margin:0;}}
+.num{{font-variant-numeric:tabular-nums;text-align:right;}}
+
+.masthead{{background:var(--navy);color:var(--navy-ink);padding:28px clamp(16px,4vw,48px);}}
+.masthead-inner{{max-width:1180px;margin:0 auto;}}
+.masthead h1{{font-size:clamp(26px,4vw,38px);font-weight:800;}}
+.masthead p{{font-family:"IBM Plex Mono",monospace;font-size:12.5px;opacity:.85;margin:6px 0 0;letter-spacing:.03em;}}
+
+.wrap{{max-width:1180px;margin:0 auto;padding:28px clamp(16px,4vw,48px) 70px;}}
+section{{margin-bottom:36px;}}
+.section-head{{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:16px;}}
+.section-head h2{{font-size:21px;}}
+.section-note{{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);}}
+
+.how-it-works{{background:var(--surface);border:1px solid var(--line);border-radius:4px;box-shadow:var(--shadow);padding:18px 22px;}}
+.how-it-works ul{{margin:8px 0 0;padding-left:20px;}}
+.how-it-works li{{margin-bottom:6px;}}
+.asks-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px;}}
+.ask-chip{{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:8px 12px;font-size:13px;}}
+.ask-chip b{{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px;}}
+
+table{{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface);border:1px solid var(--line);border-radius:3px;box-shadow:var(--shadow);margin-bottom:16px;}}
+thead th{{background:var(--navy);color:var(--navy-ink);text-align:left;padding:9px 10px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}}
+thead th.num{{text-align:right;}}
+tbody td{{padding:7px 10px;border-top:1px solid var(--line);}}
+.status-complete{{color:var(--win);font-weight:600;text-transform:capitalize;}}
+.status-pending{{color:var(--draw);font-weight:600;}}
+
+.sim{{background:var(--surface);border:1px solid var(--line);border-radius:4px;box-shadow:var(--shadow);padding:20px 22px;}}
+.sim-grid{{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}}
+@media (max-width:640px){{.sim-grid{{grid-template-columns:1fr;}}}}
+.field label{{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}}
+.field select, .field input[type=range]{{width:100%;}}
+select{{font-family:"Source Serif 4",serif;font-size:14px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:2px;padding:6px 8px;}}
+input[type=range]{{accent-color:var(--accent);}}
+.sim-readout{{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:14px;font-family:"IBM Plex Mono",monospace;font-size:13px;}}
+.sim-readout .stat{{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:8px 14px;}}
+.sim-readout .stat b{{display:block;font-size:20px;font-family:"Big Shoulders Display",sans-serif;}}
+.stat-formula{{font-size:10.5px;color:var(--muted);font-weight:400;margin-top:4px;max-width:36ch;line-height:1.4;}}
+.btn{{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:16px;letter-spacing:.03em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);border:none;border-radius:4px;padding:12px 28px;cursor:pointer;}}
+.btn:hover{{filter:brightness(1.08);}}
+.sim-result{{margin-top:16px;padding:14px 16px;border-radius:3px;background:var(--paper);border:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:13px;min-height:1.4em;}}
+.sim-result.accepted{{border-color:var(--win);}}
+.sim-result.walk_away{{border-color:var(--loss);}}
+
+footer{{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,48px) 50px;color:var(--muted);font-size:12px;font-family:"IBM Plex Mono",monospace;}}
+{NAV_CSS}
+</style>
+</head>
+<body>
+{render_nav("tv")}
+<div class="masthead">
+  <div class="masthead-inner">
+    <h1>TV Rights Marketplace</h1>
+    <p>{config["league_name"]} &middot; every team negotiates ONE Local TV Deal rate, right after Draft Day</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="section-head"><h2>How It Works</h2></div>
+    <div class="how-it-works">
+      <p>Unlike Sponsorship, there's no brand catalog here &mdash; your Local TV Deal is tied to a market tier randomly
+      assigned right after Draft Day (evenly split across all five tiers league-wide, drawn from the season seed). That
+      tier sets your base clause:</p>
+      <table><thead><tr><th>Market Tier</th><th>Base Clause</th></tr></thead><tbody>{tier_rows_html}</tbody></table>
+      <p><b>Your market tier's actual base rate is not posted publicly anywhere on this site.</b> Your network rep tells
+      you the number face to face when you sit down to negotiate &mdash; the same convention Sponsorship uses for its own
+      brand base revenue.</p>
+      <p>Right after that assignment, you negotiate LIVE against a classmate playing the network rep (rotation:
+      <span class="mono">engine/generate_tv_negotiation_rotation.py</span>). Exactly like Sponsorship, two separate
+      things are on the table:</p>
+      <div class="asks-grid">
+        <div class="ask-chip"><b>Revenue</b>Take the market-tier Base exactly (guaranteed), or Negotiate &mdash; lands
+        anywhere from &minus;10% to +10% of base, set by your <b>Negotiating Leverage</b> (roster avg. Star Power + a
+        standings bonus once the season starts). A weak hand can genuinely land below base.</div>
+        <div class="ask-chip"><b>Clause</b>A separate ask &mdash; push for a looser clause at Modest/Bold/Very Bold
+        intensity, gated by the same leverage. This one CAN walk away if you overreach; the revenue side never does.</div>
+        <div class="ask-chip"><b>The commission</b>Land the rate away from base, in EITHER direction, and that gap is
+        credited &mdash; immediately, not at the Round 3 split &mdash; as bonus revenue to whichever team played the
+        network rep. Above base rewards the negotiating team's win; below base (a good deal for the network) rewards
+        the rep instead. Landing exactly at base earns nobody a commission.</div>
+      </div>
+      <p style="margin-top:12px;"><b>This negotiation sets the RATE and the CLAUSE.</b> The money itself is still paid at the
+      league's Round 3 TV Revenue Day, with the Star Power modifier (+15% if your starting XI is top-3 league-wide then)
+      still applied on top of whatever rate you locked in here. The clause is checked once at season end, exactly like a
+      sponsorship clause &mdash; see "What the Clause Actually Means" on the Rulebook's TV / Broadcast Revenue section for
+      the same rank-threshold table Sponsorship uses.</p>
+      <p style="margin-top:10px;"><b>The League-Wide (National) TV Deal is separate and fully automatic</b> &mdash; a
+      shared formula-only split (base + standings/Star Power bonus) with no live negotiation, since there's no natural
+      second party to negotiate a league-wide number against. See the Rulebook's TV / Broadcast Revenue section.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Team Status</h2>
+      <span class="section-note">live: rate, clause, and status update as negotiations resolve</span>
+    </div>
+    <table>
+      <thead><tr><th>Team</th><th>Market Tier</th><th>Clause</th><th class="num">Status</th></tr></thead>
+      <tbody>{team_rows_html}</tbody>
+    </table>
+  </section>
+
+  <section>
+    <p class="sub-backend-warning" hidden>Backend not configured yet &mdash; submissions are disabled until BACKEND_URL is set in assets/config.js.</p>
+    <div class="sub-card">
+      <h2>Lock In Your Local TV Deal</h2>
+      <p class="sub-sub">The real thing -- saved live. One-time only, right after Draft Day.</p>
+      <div class="sub-grid">
+        <div class="sub-field"><label for="tv-team">Team</label><select id="tv-team" class="sub-team-select"></select></div>
+        <div class="sub-field"><label for="tv-pin">Team PIN</label><input type="password" inputmode="numeric" maxlength="4" id="tv-pin" class="sub-pin" placeholder="4-digit PIN"></div>
+      </div>
+      <p class="sub-tier-note" id="tv-tier-note"></p>
+      <div class="sub-grid">
+        <div class="sub-field"><label for="tv-mode">Result</label>
+          <select id="tv-mode">
+            <option value="base">Take Base terms exactly</option>
+            <option value="negotiate">Negotiated different terms</option>
+          </select>
+        </div>
+      </div>
+      <div class="sub-grid" id="tv-negotiate-fields" hidden>
+        <div class="sub-field" id="tv-revenue-field"><label for="tv-revenue">Final agreed rate ($/season)</label><input type="number" id="tv-revenue" placeholder="e.g. 1320000"></div>
+        <div class="sub-field" id="tv-clause-field"><label for="tv-clause">Final agreed clause</label>
+          <select id="tv-clause"><option value="strict">Strict</option><option value="standard">Standard</option><option value="loose">Loose</option><option value="none">None</option></select>
+        </div>
+        <div class="sub-field" id="tv-rep-field"><label for="tv-rep">Network rep (if rate differs from base, either direction)</label><select id="tv-rep" class="sub-team-select"></select></div>
+      </div>
+      <button class="sub-btn" id="tv-submit">Submit Local TV Deal</button>
+      <p class="sub-msg" id="tv-msg"></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Try a Negotiation</h2>
+      <span class="section-note">a rehearsal &mdash; the real negotiation still happens live, right after Draft Day</span>
+    </div>
+    <div class="sim">
+      <p class="sim-note">Practice the math with a hypothetical rate -- real market-tier base rates aren't posted
+      publicly anywhere on this site; your network rep tells you yours face to face.</p>
+      <div class="sim-grid">
+        <div class="field">
+          <label for="sim-base">Hypothetical Base Rate ($/season)</label>
+          <input type="number" id="sim-base" value="1000000" step="50000" min="0">
+        </div>
+        <div class="field">
+          <label for="sim-base-clause">Hypothetical Base Clause</label>
+          <select id="sim-base-clause">
+            <option value="strict">Strict</option>
+            <option value="standard" selected>Standard</option>
+            <option value="loose">Loose</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sim-star">Your Roster Avg. Star Power: <span id="sim-star-v">65</span></label>
+          <input type="range" min="30" max="99" value="65" id="sim-star">
+        </div>
+        <div class="field">
+          <label for="sim-revenue-ask">Revenue</label>
+          <select id="sim-revenue-ask">
+            <option value="base">Take Base (guaranteed)</option>
+            <option value="negotiate">Negotiate (&minus;10% to +10%, by leverage)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sim-clause-ask">Clause</label>
+          <select id="sim-clause-ask">
+            <option value="none">Don't push it (keep base clause)</option>
+            <option value="modest">Ask Modest</option>
+            <option value="bold">Ask Bold</option>
+            <option value="very_bold">Ask Very Bold</option>
+          </select>
+        </div>
+      </div>
+      <div class="sim-readout">
+        <div class="stat">Leverage<br><b id="sim-leverage">0</b>
+          <div class="stat-formula">= (avg Star Power &minus; 50) &times; 2, clamped 0&ndash;100. Once the season starts,
+          live negotiation also adds a standings bonus (+15 top third / +7 mid table / +0 bottom third) this
+          rehearsal tool doesn't model.</div>
+        </div>
+        <div class="stat">Rate Adjustment<br><b id="sim-adjustment">&ndash;</b></div>
+      </div>
+      <button class="btn" id="sim-go">Make This Ask</button>
+      <div class="sim-result" id="sim-result">Enter a hypothetical base rate and your asks, then hit the button.</div>
+    </div>
+  </section>
+</div>
+
+<footer>{config["league_name"]} &middot; TV rights marketplace &mdash; math matches engine/negotiation.py and engine/resolve_local_tv_pick.py exactly</footer>
+
+<script>
+const REQUIRED_THRESHOLD = {{modest: 20, bold: 50, very_bold: 80}};
+const CLAUSE_UPSIDE = {{modest: 0.10, bold: 0.20, very_bold: 0.30}};
+const CLAUSE_LEVELS = ["strict", "standard", "loose", "none"];
+const REVENUE_RANGE = 0.10;
+
+function computeLeverage(avgStar) {{
+  return Math.max(0, Math.min(100, (avgStar - 50) * 2));
+}}
+
+function updateReadout() {{
+  const star = parseFloat(document.getElementById('sim-star').value);
+  document.getElementById('sim-star-v').textContent = star;
+  const leverage = computeLeverage(star);
+  document.getElementById('sim-leverage').textContent = leverage.toFixed(0);
+  const revenueAsk = document.getElementById('sim-revenue-ask').value;
+  if (revenueAsk === 'base') {{
+    document.getElementById('sim-adjustment').textContent = '0% (guaranteed)';
+  }} else {{
+    const adj = -REVENUE_RANGE + (leverage / 100) * (2 * REVENUE_RANGE);
+    document.getElementById('sim-adjustment').textContent = (adj >= 0 ? '+' : '') + (adj * 100).toFixed(1) + '%';
+  }}
+}}
+
+document.querySelectorAll('#sim-star, #sim-revenue-ask, #sim-clause-ask').forEach(el => el.addEventListener('input', updateReadout));
+updateReadout();
+
+document.getElementById('sim-go').addEventListener('click', () => {{
+  const star = parseFloat(document.getElementById('sim-star').value);
+  const leverage = computeLeverage(star);
+  const revenueAsk = document.getElementById('sim-revenue-ask').value;
+  const clauseAsk = document.getElementById('sim-clause-ask').value;
+  const baseRevenue = parseFloat(document.getElementById('sim-base').value) || 0;
+  const baseClause = document.getElementById('sim-base-clause').value;
+  const resultEl = document.getElementById('sim-result');
+
+  // --- revenue axis ---
+  let rate = baseRevenue, commission = 0;
+  if (revenueAsk === 'negotiate') {{
+    const adj = -REVENUE_RANGE + (leverage / 100) * (2 * REVENUE_RANGE);
+    rate = Math.round(baseRevenue * (1 + adj));
+    commission = Math.max(0, rate - baseRevenue);
+  }}
+
+  // --- clause axis (independent) ---
+  let clause = baseClause;
+  let clauseNote = '';
+  if (clauseAsk !== 'none') {{
+    const threshold = REQUIRED_THRESHOLD[clauseAsk];
+    const gap = leverage - threshold;
+    let outcome, fraction;
+    if (gap >= 15) {{ outcome = 'accepted'; fraction = 1.0; }}
+    else if (gap <= -15) {{ outcome = 'walk_away'; fraction = 0.0; }}
+    else {{
+      const acceptProb = 0.5 + gap / 30.0;
+      if (Math.random() < acceptProb) {{ outcome = 'accepted'; fraction = 1.0; }}
+      else {{ outcome = 'partial'; fraction = 0.5; }}
+    }}
+    if (outcome === 'walk_away') {{
+      clauseNote = ` Clause ask WALKED AWAY (leverage ${{leverage.toFixed(0)}} too far below the ${{threshold}} needed) -- clause stays ${{baseClause}}.`;
+    }} else {{
+      const upside = CLAUSE_UPSIDE[clauseAsk] * fraction;
+      if (upside > 0) {{
+        const idx = CLAUSE_LEVELS.indexOf(baseClause);
+        const steps = (clauseAsk === 'very_bold' && fraction === 1.0) ? 2 : 1;
+        clause = CLAUSE_LEVELS[Math.min(CLAUSE_LEVELS.length - 1, idx + steps)];
+        clauseNote = outcome === 'accepted' ? ' Clause ask ACCEPTED.' : ' Clause ask PARTIAL (met halfway).';
+      }}
+    }}
+  }}
+
+  resultEl.className = 'sim-result ' + (revenueAsk === 'negotiate' && rate < baseRevenue ? 'walk_away' : 'accepted');
+  let text = `Negotiated terms: rate $${{rate.toLocaleString()}}/season, clause ${{clause}}.${{clauseNote}} Still paid at the Round 3 split, plus Star Power bonus if earned then.`;
+  if (commission > 0) {{
+    text += ` A live network rep here would earn a $${{commission.toLocaleString()}} commission for their own team, credited now.`;
+  }}
+  resultEl.textContent = text;
+}});
+</script>
+<script src="../assets/config.js"></script>
+<script src="../assets/submissions.js"></script>
+<script>
+(async function initLocalTvDealForm() {{
+  await Promise.all([loadPlayers(), loadTeams(), loadCatalog()]);
+  populateTeamSelects();
+  initTvForm();
+}})();
+</script>
+</body>
+</html>'''
+
+
+if __name__ == "__main__":
+    config = load_json("league_config.json")
+    deals = load_json("deals.json")
+    ltv_path = os.path.join(BASE, "data", "local_tv_deals.json")
+    if not os.path.exists(ltv_path):
+        print("ERROR: data/local_tv_deals.json not found -- run generate_local_tv_deals.py first.")
+        raise SystemExit(1)
+    ltv = load_json("local_tv_deals.json")
+    html = render(config, deals, ltv)
+    out_dir = os.path.join(BASE, "tv-site")
+    os.makedirs(out_dir, exist_ok=True)
+    out_path = os.path.join(out_dir, "index.html")
+    with open(out_path, "w") as f:
+        f.write(html)
+    print(f"Rendered -> {out_path}")
