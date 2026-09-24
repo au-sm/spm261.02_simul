@@ -1,5 +1,5 @@
 {
-  "_notes": "Tue/Thu schedule, Draft Day Oct 6 (matches Section 1). Oct 13 is skipped entirely -- Section 2 has an exam that day, so the Round 2-3 match day that would normally land there (per Section 1s pattern) is pushed to the next class session (Thu Oct 15) instead, and every match day after that shifts back by one class session accordingly. 11 match days total to cover all 21 rounds (Section 2 has 21 teams vs. Section 1s 18, so 4 more rounds -- 2 extra match days beyond Section 1s 9).",
+  "_notes": "Rebuilt for 20 teams (19 rounds) after Scarlette Cowley withdrew, removed 2026-09-24. Same Tue/Thu pattern, Draft Day Oct 6, Oct 13 skipped (exam). 10 match days total to cover 19 rounds (vs. the prior 21-round/11-match-day version).",
   "draft_day": "2026-10-06",
   "match_days": "Tuesday and Thursday -- the actual class meeting days. Doubleheaders (2 rounds resolved per match day) except Round 1, which is a single easing-in round the first class after Draft Day. Oct 13 is skipped (exam day).",
   "trade_day": "2026-10-20",
@@ -72,14 +72,7 @@
         18,
         19
       ]
-    },
-    {
-      "date": "2026-11-17",
-      "rounds": [
-        20,
-        21
-      ]
     }
   ],
-  "season_end": "2026-11-17"
+  "season_end": "2026-11-12"
 }

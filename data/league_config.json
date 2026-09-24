@@ -4,7 +4,7 @@
   "phase": "pre-draft",
   "current_round": 0,
   "season_seed": 615842671,
-  "n_teams": 21,
+  "n_teams": 20,
   "roster_size": 18,
   "starting_budget": 15000000,
   "salary_cap": 18000000,
@@ -25,98 +25,93 @@
     {
       "team_id": 2,
       "name": "Team 3",
-      "owner": "Scarlette Cowley"
+      "owner": "Willow Davidson"
     },
     {
       "team_id": 3,
       "name": "Team 4",
-      "owner": "Willow Davidson"
+      "owner": "Nicholas Dellarocca"
     },
     {
       "team_id": 4,
       "name": "Team 5",
-      "owner": "Nicholas Dellarocca"
+      "owner": "Alexander Dodson"
     },
     {
       "team_id": 5,
       "name": "Team 6",
-      "owner": "Alexander Dodson"
+      "owner": "Victoria Goad"
     },
     {
       "team_id": 6,
       "name": "Team 7",
-      "owner": "Victoria Goad"
+      "owner": "Joshua Graham"
     },
     {
       "team_id": 7,
       "name": "Team 8",
-      "owner": "Joshua Graham"
+      "owner": "Jack Gricus"
     },
     {
       "team_id": 8,
       "name": "Team 9",
-      "owner": "Jack Gricus"
+      "owner": "Chloe Hunold"
     },
     {
       "team_id": 9,
       "name": "Team 10",
-      "owner": "Chloe Hunold"
+      "owner": "Liam Kansler"
     },
     {
       "team_id": 10,
       "name": "Team 11",
-      "owner": "Liam Kansler"
+      "owner": "Hunter Lee"
     },
     {
       "team_id": 11,
       "name": "Team 12",
-      "owner": "Hunter Lee"
+      "owner": "Sophia Militello"
     },
     {
       "team_id": 12,
       "name": "Team 13",
-      "owner": "Sophia Militello"
+      "owner": "Graham Raymond"
     },
     {
       "team_id": 13,
       "name": "Team 14",
-      "owner": "Graham Raymond"
+      "owner": "Logan Salvato"
     },
     {
       "team_id": 14,
       "name": "Team 15",
-      "owner": "Logan Salvato"
+      "owner": "Luke Sedor"
     },
     {
       "team_id": 15,
       "name": "Team 16",
-      "owner": "Luke Sedor"
+      "owner": "Liam Shawaluk"
     },
     {
       "team_id": 16,
       "name": "Team 17",
-      "owner": "Liam Shawaluk"
+      "owner": "Jackson Solomon"
     },
     {
       "team_id": 17,
       "name": "Team 18",
-      "owner": "Jackson Solomon"
+      "owner": "Luca Stavrevski"
     },
     {
       "team_id": 18,
       "name": "Team 19",
-      "owner": "Luca Stavrevski"
+      "owner": "Van Walters"
     },
     {
       "team_id": 19,
       "name": "Team 20",
-      "owner": "Van Walters"
-    },
-    {
-      "team_id": 20,
-      "name": "Team 21",
       "owner": "Jake Wiener"
     }
   ],
-  "_notes": "Section 2 of 2 -- 21 students (real roster loaded 2026-09-22), built as an independent parallel copy of Section 1 (au-sm/spm261.01_simul), scaffolded from that repo's engine/ and asset code. Each student is CEO/GM of their team (owner field) and will pick their own team name before Draft Day -- 'name' stays a placeholder ('Team 1', etc.) until then, not a real club name. Shares the identical 399-player pool (players.csv/players.json) with Section 1 by design, but has its own independent season_seed (615842671, different from Section 1's 1556832574) so draft order, schedule, and local TV market-tier assignment are not shared or correlated with Section 1's. playoff_teams kept at 6, same as Section 1, rather than scaled to the larger roster -- a reasonable simplifying choice. PINs deliberately NOT stored here -- this repo is public. Pins live only in the Google Sheet Teams tab (once deployed) and are injected at runtime by engine/auto_resolve.py, never committed."
+  "_notes": "Scarlette Cowley withdrew from the course before Draft Day (removed 2026-09-24, still pre-draft, no submissions existed yet -- safe, clean removal). Remaining 20 students renumbered team_id 0-19 contiguously. Everything downstream (schedule, market tiers, calendar, clause thresholds) regenerated for 20 teams. Same player pool as Section 1, own season_seed and deployment."
 }
