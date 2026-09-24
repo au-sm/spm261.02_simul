@@ -54,7 +54,7 @@ var SEED_TEAMS = [
   {id:13,name:"Team 14",owner:"Graham Raymond",pin:"8393"},
   {id:14,name:"Team 15",owner:"Logan Salvato",pin:"8166"},
   {id:15,name:"Team 16",owner:"Luke Sedor",pin:"5184"},
-  {id:16,name:"Team 17",owner:"Liam Shawaluk",pin:"0222"},
+  {id:16,name:"Team 17",owner:"Liam Shawaluk",pin:"6631"},
   {id:17,name:"Team 18",owner:"Jackson Solomon",pin:"7371"},
   {id:18,name:"Team 19",owner:"Luca Stavrevski",pin:"3409"},
   {id:19,name:"Team 20",owner:"Van Walters",pin:"5788"},
