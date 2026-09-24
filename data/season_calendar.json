@@ -1,8 +1,8 @@
 {
-  "_notes": "Matches Section 1's actual class schedule exactly (Tue/Thu, Draft Day Oct 6) per instructor confirmation -- both sections meet the same days. Section 2 has 21 rounds (21 teams) vs Section 1's 17 (18 teams), so 2 extra Tue/Thu match days (Nov 10, Nov 12) were added after Section 1's last date to cover rounds 18-21, continuing the same doubleheader pattern.",
+  "_notes": "Tue/Thu schedule, Draft Day Oct 6 (matches Section 1). Oct 13 is skipped entirely -- Section 2 has an exam that day, so the Round 2-3 match day that would normally land there (per Section 1s pattern) is pushed to the next class session (Thu Oct 15) instead, and every match day after that shifts back by one class session accordingly. 11 match days total to cover all 21 rounds (Section 2 has 21 teams vs. Section 1s 18, so 4 more rounds -- 2 extra match days beyond Section 1s 9).",
   "draft_day": "2026-10-06",
-  "match_days": "Tuesday and Thursday -- the actual class meeting days. Doubleheaders (2 rounds resolved per match day) except Round 1, which is a single easing-in round the first class after Draft Day.",
-  "trade_day": "2026-10-15",
+  "match_days": "Tuesday and Thursday -- the actual class meeting days. Doubleheaders (2 rounds resolved per match day) except Round 1, which is a single easing-in round the first class after Draft Day. Oct 13 is skipped (exam day).",
+  "trade_day": "2026-10-20",
   "match_day_schedule": [
     {
       "date": "2026-10-08",
@@ -11,75 +11,75 @@
       ]
     },
     {
-      "date": "2026-10-13",
+      "date": "2026-10-15",
       "rounds": [
         2,
         3
       ]
     },
     {
-      "date": "2026-10-15",
+      "date": "2026-10-20",
       "rounds": [
         4,
         5
       ]
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-22",
       "rounds": [
         6,
         7
       ]
     },
     {
-      "date": "2026-10-22",
+      "date": "2026-10-27",
       "rounds": [
         8,
         9
       ]
     },
     {
-      "date": "2026-10-27",
+      "date": "2026-10-29",
       "rounds": [
         10,
         11
       ]
     },
     {
-      "date": "2026-10-29",
+      "date": "2026-11-03",
       "rounds": [
         12,
         13
       ]
     },
     {
-      "date": "2026-11-03",
+      "date": "2026-11-05",
       "rounds": [
         14,
         15
       ]
     },
     {
-      "date": "2026-11-05",
+      "date": "2026-11-10",
       "rounds": [
         16,
         17
       ]
     },
     {
-      "date": "2026-11-10",
+      "date": "2026-11-12",
       "rounds": [
         18,
         19
       ]
     },
     {
-      "date": "2026-11-12",
+      "date": "2026-11-17",
       "rounds": [
         20,
         21
       ]
     }
   ],
-  "season_end": "2026-11-12"
+  "season_end": "2026-11-17"
 }
