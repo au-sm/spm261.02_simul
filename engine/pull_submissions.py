@@ -19,7 +19,7 @@ import os
 import sys
 import urllib.request
 
-BACKEND_URL = "https://script.google.com/macros/s/AKfycbzt5f3v5N02PlkztMKRtVTSCjgJmsISm_R_KA7LgIZhANrsYY-cbrDtp5ng9Jp7qdQd7g/exec"
+BACKEND_URL = "https://script.google.com/macros/s/AKfycbz6E_q5T5N6CuxdXgomVWr7hFHSxhvjJMFd-inrqVJTDeAFcxi_fq6u-Y-n-MV4nkIw/exec"
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LINEUP_CSV_FIELDS = [
