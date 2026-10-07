@@ -76,8 +76,9 @@
       "attendance_rate": 0.65,
       "revenue": 389940,
       "home_revenue": 389940,
-      "away_revenue": 0,
-      "away_share_rate": 0
+      "away_revenue": 19844,
+      "away_share_rate": 0,
+      "away_payout": 19844
     }
   },
   {
@@ -157,8 +158,9 @@
       "attendance_rate": 0.672,
       "revenue": 403200,
       "home_revenue": 403200,
-      "away_revenue": 0,
-      "away_share_rate": 0
+      "away_revenue": 19844,
+      "away_share_rate": 0,
+      "away_payout": 19844
     }
   },
   {
@@ -838,9 +840,10 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 0,
+      "home_revenue": 167876,
       "away_revenue": 0,
-      "away_share_rate": 0
+      "away_share_rate": 0,
+      "home_payout": 167876
     }
   }
 ]
