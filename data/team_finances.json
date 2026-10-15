@@ -22,7 +22,7 @@
       "local_tv_revenue": 0
     },
     "3": {
-      "ticket_revenue": 184995,
+      "ticket_revenue": 0,
       "sponsorship_revenue": 0,
       "tv_revenue": 0,
       "sponsors_owned": [],
@@ -43,7 +43,7 @@
       "local_tv_revenue": 0
     },
     "6": {
-      "ticket_revenue": 126936,
+      "ticket_revenue": 38761,
       "sponsorship_revenue": 0,
       "tv_revenue": 0,
       "sponsors_owned": [],
@@ -127,7 +127,7 @@
       "local_tv_revenue": 0
     },
     "18": {
-      "ticket_revenue": 108335,
+      "ticket_revenue": 20160,
       "sponsorship_revenue": 0,
       "tv_revenue": 0,
       "sponsors_owned": [],

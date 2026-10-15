@@ -325,10 +325,10 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 184995,
+      "home_revenue": 0,
       "away_revenue": 55498,
       "away_share_rate": 0,
-      "home_forfeit_gate": 184995,
+      "home_forfeit_gate": 0,
       "away_forfeit_gate": 55498,
       "forfeit_gate": 369990
     }
@@ -929,10 +929,10 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 88175,
+      "home_revenue": 0,
       "away_revenue": 26452,
       "away_share_rate": 0,
-      "home_forfeit_gate": 88175,
+      "home_forfeit_gate": 0,
       "away_forfeit_gate": 26452,
       "forfeit_gate": 176350
     }
@@ -1556,10 +1556,10 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 88175,
+      "home_revenue": 0,
       "away_revenue": 26452,
       "away_share_rate": 0,
-      "home_forfeit_gate": 88175,
+      "home_forfeit_gate": 0,
       "away_forfeit_gate": 26452,
       "forfeit_gate": 176350
     }
