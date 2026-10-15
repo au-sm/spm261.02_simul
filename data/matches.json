@@ -76,9 +76,10 @@
       "attendance_rate": 0.65,
       "revenue": 389940,
       "home_revenue": 389940,
-      "away_revenue": 19844,
+      "away_revenue": 19497,
       "away_share_rate": 0,
-      "away_payout": 19844
+      "away_forfeit_gate": 19497,
+      "forfeit_gate": 389940
     }
   },
   {
@@ -158,9 +159,10 @@
       "attendance_rate": 0.672,
       "revenue": 403200,
       "home_revenue": 403200,
-      "away_revenue": 19844,
+      "away_revenue": 20160,
       "away_share_rate": 0,
-      "away_payout": 19844
+      "away_forfeit_gate": 20160,
+      "forfeit_gate": 403200
     }
   },
   {
@@ -323,12 +325,12 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 221994,
+      "home_revenue": 184995,
       "away_revenue": 55498,
       "away_share_rate": 0,
-      "home_no_submission": 221994,
-      "away_no_submission": 55498,
-      "no_submission_gate": 369990
+      "home_forfeit_gate": 184995,
+      "away_forfeit_gate": 55498,
+      "forfeit_gate": 369990
     }
   },
   {
@@ -843,10 +845,12 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 19844,
-      "away_revenue": 0,
+      "home_revenue": 184995,
+      "away_revenue": 55498,
       "away_share_rate": 0,
-      "home_payout": 19844
+      "home_forfeit_gate": 184995,
+      "away_forfeit_gate": 55498,
+      "forfeit_gate": 369990
     }
   },
   {
@@ -925,12 +929,12 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 105810,
+      "home_revenue": 88175,
       "away_revenue": 26452,
       "away_share_rate": 0,
-      "home_no_submission": 105810,
-      "away_no_submission": 26452,
-      "no_submission_gate": 176350
+      "home_forfeit_gate": 88175,
+      "away_forfeit_gate": 26452,
+      "forfeit_gate": 176350
     }
   },
   {
@@ -1255,7 +1259,9 @@
       "revenue": 516330,
       "home_revenue": 516330,
       "away_revenue": 0,
-      "away_share_rate": 0
+      "away_share_rate": 0,
+      "away_forfeit_gate": 0,
+      "forfeit_gate": 516330
     }
   },
   {
@@ -1550,12 +1556,12 @@
       "attendance": 0,
       "attendance_rate": 0,
       "revenue": 0,
-      "home_revenue": 105810,
+      "home_revenue": 88175,
       "away_revenue": 26452,
       "away_share_rate": 0,
-      "home_no_submission": 105810,
-      "away_no_submission": 26452,
-      "no_submission_gate": 176350
+      "home_forfeit_gate": 88175,
+      "away_forfeit_gate": 26452,
+      "forfeit_gate": 176350
     }
   },
   {
@@ -1712,7 +1718,9 @@
       "revenue": 263400,
       "home_revenue": 263400,
       "away_revenue": 0,
-      "away_share_rate": 0
+      "away_share_rate": 0,
+      "away_forfeit_gate": 0,
+      "forfeit_gate": 263400
     }
   }
 ]
