@@ -1722,5 +1722,780 @@
       "away_forfeit_gate": 0,
       "forfeit_gate": 263400
     }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 0,
+    "away_id": 17,
+    "home_goals": 1,
+    "away_goals": 1,
+    "home_formation": "3-5-2",
+    "away_formation": "4-4-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Defensive",
+    "home_submitted": true,
+    "away_submitted": true,
+    "goal_events": [
+      {
+        "minute": 38,
+        "side": "away",
+        "type": "Corner Kick",
+        "scorer": "Nikolai Ferreira",
+        "scorer_position": "MF",
+        "scorer_id": "235"
+      },
+      {
+        "minute": 81,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Omar Nowak",
+        "scorer_position": "MF",
+        "scorer_id": "290"
+      }
+    ],
+    "home_starters": [
+      "371",
+      "244",
+      "92",
+      "283",
+      "67",
+      "290",
+      "275",
+      "331",
+      "161",
+      "233",
+      "285"
+    ],
+    "away_starters": [
+      "304",
+      "44",
+      "60",
+      "197",
+      "24",
+      "235",
+      "184",
+      "43",
+      "348",
+      "273",
+      "81"
+    ],
+    "gate": {
+      "price_tier": "Premium",
+      "price": 50,
+      "attendance": 11036,
+      "attendance_rate": 0.552,
+      "revenue": 551800,
+      "home_revenue": 495155,
+      "away_revenue": 56645,
+      "away_share_rate": 0.103
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 18,
+    "away_id": 16,
+    "home_goals": 2,
+    "away_goals": 0,
+    "home_formation": "4-3-3",
+    "away_formation": "4-4-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Balanced",
+    "home_submitted": true,
+    "away_submitted": true,
+    "goal_events": [
+      {
+        "minute": 53,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Diego Weber",
+        "scorer_position": "FW",
+        "scorer_id": "308"
+      },
+      {
+        "minute": 87,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Andre Suarez",
+        "scorer_position": "FW",
+        "scorer_id": "77"
+      }
+    ],
+    "home_starters": [
+      "102",
+      "107",
+      "203",
+      "223",
+      "299",
+      "108",
+      "190",
+      "365",
+      "308",
+      "77",
+      "329"
+    ],
+    "away_starters": [
+      "82",
+      "327",
+      "46",
+      "231",
+      "307",
+      "353",
+      "74",
+      "355",
+      "208",
+      "373",
+      "42"
+    ],
+    "gate": {
+      "price_tier": "Standard",
+      "price": 30,
+      "attendance": 8824,
+      "attendance_rate": 0.441,
+      "revenue": 264720,
+      "home_revenue": 238017,
+      "away_revenue": 26703,
+      "away_share_rate": 0.101
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 15,
+    "away_id": 19,
+    "home_goals": 0,
+    "away_goals": 3,
+    "forfeit": "home",
+    "home_formation": "4-4-2",
+    "away_formation": "4-4-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Balanced",
+    "home_submitted": false,
+    "away_submitted": true,
+    "forfeit_reason": {
+      "home": "no lineup submitted",
+      "away": null
+    },
+    "goal_events": [
+      {
+        "minute": 6,
+        "side": "away",
+        "type": "Free Kick",
+        "scorer": "Emil Rossi",
+        "scorer_position": "FW",
+        "scorer_id": "271"
+      },
+      {
+        "minute": 70,
+        "side": "away",
+        "type": "Penalty Kick",
+        "scorer": "Emil Rossi",
+        "scorer_position": "FW",
+        "scorer_id": "271"
+      },
+      {
+        "minute": 83,
+        "side": "away",
+        "type": "Header",
+        "scorer": "Milan Mensah",
+        "scorer_position": "MF",
+        "scorer_id": "238"
+      }
+    ],
+    "home_starters": [
+      "381",
+      "394",
+      "201",
+      "2",
+      "219",
+      "94",
+      "153",
+      "284",
+      "114",
+      "374",
+      "274"
+    ],
+    "away_starters": [
+      "225",
+      "224",
+      "372",
+      "397",
+      "309",
+      "377",
+      "288",
+      "398",
+      "238",
+      "271",
+      "148"
+    ],
+    "gate": {
+      "price_tier": null,
+      "price": 0,
+      "attendance": 0,
+      "attendance_rate": 0,
+      "revenue": 0,
+      "home_revenue": 0,
+      "away_revenue": 37912,
+      "away_share_rate": 0,
+      "home_forfeit_gate": 0,
+      "away_forfeit_gate": 37912,
+      "forfeit_gate": 252750
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 1,
+    "away_id": 14,
+    "home_goals": 4,
+    "away_goals": 0,
+    "home_formation": "4-4-2",
+    "away_formation": "5-3-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Defensive",
+    "home_submitted": true,
+    "away_submitted": true,
+    "goal_events": [
+      {
+        "minute": 22,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Enzo Novak",
+        "scorer_position": "FW",
+        "scorer_id": "346"
+      },
+      {
+        "minute": 24,
+        "side": "home",
+        "type": "Free Kick",
+        "scorer": "Andre Larsson",
+        "scorer_position": "FW",
+        "scorer_id": "69"
+      },
+      {
+        "minute": 42,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Andre Larsson",
+        "scorer_position": "FW",
+        "scorer_id": "69"
+      },
+      {
+        "minute": 71,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Kofi Weber",
+        "scorer_position": "MF",
+        "scorer_id": "178"
+      }
+    ],
+    "home_starters": [
+      "269",
+      "251",
+      "143",
+      "316",
+      "246",
+      "178",
+      "267",
+      "35",
+      "232",
+      "346",
+      "69"
+    ],
+    "away_starters": [
+      "399",
+      "99",
+      "386",
+      "281",
+      "93",
+      "27",
+      "352",
+      "343",
+      "19",
+      "206",
+      "124"
+    ],
+    "gate": {
+      "price_tier": "Standard",
+      "price": 30,
+      "attendance": 17260,
+      "attendance_rate": 0.863,
+      "revenue": 517800,
+      "home_revenue": 440130,
+      "away_revenue": 77670,
+      "away_share_rate": 0.15
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 13,
+    "away_id": 2,
+    "home_goals": 0,
+    "away_goals": 3,
+    "forfeit": "home",
+    "home_formation": "4-4-2",
+    "away_formation": "3-5-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Attacking",
+    "home_submitted": false,
+    "away_submitted": true,
+    "forfeit_reason": {
+      "home": "no lineup submitted",
+      "away": null
+    },
+    "goal_events": [
+      {
+        "minute": 1,
+        "side": "away",
+        "type": "Strike",
+        "scorer": "Pavel Novak",
+        "scorer_position": "FW",
+        "scorer_id": "217"
+      },
+      {
+        "minute": 52,
+        "side": "away",
+        "type": "Header",
+        "scorer": "Leon Kucera",
+        "scorer_position": "MF",
+        "scorer_id": "315"
+      },
+      {
+        "minute": 56,
+        "side": "away",
+        "type": "Strike",
+        "scorer": "Nico Kucera",
+        "scorer_position": "FW",
+        "scorer_id": "103"
+      }
+    ],
+    "home_starters": [
+      "341",
+      "396",
+      "50",
+      "101",
+      "32",
+      "317",
+      "119",
+      "193",
+      "242",
+      "310",
+      "59"
+    ],
+    "away_starters": [
+      "361",
+      "202",
+      "252",
+      "322",
+      "174",
+      "221",
+      "149",
+      "342",
+      "315",
+      "217",
+      "103"
+    ],
+    "gate": {
+      "price_tier": null,
+      "price": 0,
+      "attendance": 0,
+      "attendance_rate": 0,
+      "revenue": 0,
+      "home_revenue": 0,
+      "away_revenue": 37912,
+      "away_share_rate": 0,
+      "home_forfeit_gate": 0,
+      "away_forfeit_gate": 37912,
+      "forfeit_gate": 252750
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 3,
+    "away_id": 12,
+    "home_goals": 0,
+    "away_goals": 0,
+    "forfeit": "both",
+    "home_formation": "4-4-2",
+    "away_formation": "4-4-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Balanced",
+    "home_submitted": false,
+    "away_submitted": false,
+    "forfeit_reason": {
+      "home": "no lineup submitted",
+      "away": "no lineup submitted"
+    },
+    "goal_events": [],
+    "home_starters": [
+      "295",
+      "48",
+      "254",
+      "239",
+      "191",
+      "213",
+      "395",
+      "5",
+      "257",
+      "141",
+      "7"
+    ],
+    "away_starters": [
+      "79",
+      "195",
+      "230",
+      "30",
+      "165",
+      "112",
+      "15",
+      "63",
+      "194",
+      "311",
+      "189"
+    ],
+    "gate": {
+      "price_tier": null,
+      "price": 0,
+      "attendance": 0,
+      "attendance_rate": 0,
+      "revenue": 0,
+      "home_revenue": 0,
+      "away_revenue": 0,
+      "away_share_rate": 0,
+      "home_forfeit_gate": 0,
+      "away_forfeit_gate": 0,
+      "forfeit_gate": 252750
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 11,
+    "away_id": 4,
+    "home_goals": 3,
+    "away_goals": 3,
+    "home_formation": "5-3-2",
+    "away_formation": "4-3-3",
+    "home_strategy": "Defensive",
+    "away_strategy": "Attacking",
+    "home_submitted": true,
+    "away_submitted": true,
+    "goal_events": [
+      {
+        "minute": 10,
+        "side": "away",
+        "type": "Penalty Kick",
+        "scorer": "Andre Moreno",
+        "scorer_position": "FW",
+        "scorer_id": "389"
+      },
+      {
+        "minute": 22,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Sami Rossi",
+        "scorer_position": "FW",
+        "scorer_id": "121"
+      },
+      {
+        "minute": 32,
+        "side": "away",
+        "type": "Strike",
+        "scorer": "Pavel Berg",
+        "scorer_position": "MF",
+        "scorer_id": "268"
+      },
+      {
+        "minute": 34,
+        "side": "home",
+        "type": "Header",
+        "scorer": "Kai Sokol",
+        "scorer_position": "MF",
+        "scorer_id": "73"
+      },
+      {
+        "minute": 35,
+        "side": "home",
+        "type": "Penalty Kick",
+        "scorer": "Sami Rossi",
+        "scorer_position": "FW",
+        "scorer_id": "121"
+      },
+      {
+        "minute": 67,
+        "side": "away",
+        "type": "Penalty Kick",
+        "scorer": "Andre Moreno",
+        "scorer_position": "FW",
+        "scorer_id": "389"
+      }
+    ],
+    "home_starters": [
+      "379",
+      "100",
+      "367",
+      "210",
+      "349",
+      "171",
+      "73",
+      "209",
+      "152",
+      "121",
+      "181"
+    ],
+    "away_starters": [
+      "186",
+      "71",
+      "180",
+      "313",
+      "383",
+      "268",
+      "350",
+      "362",
+      "86",
+      "338",
+      "389"
+    ],
+    "gate": {
+      "price_tier": "Standard",
+      "price": 30,
+      "attendance": 16715,
+      "attendance_rate": 0.836,
+      "revenue": 501450,
+      "home_revenue": 447366,
+      "away_revenue": 54084,
+      "away_share_rate": 0.108
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 5,
+    "away_id": 10,
+    "home_goals": 2,
+    "away_goals": 1,
+    "home_formation": "4-4-2",
+    "away_formation": "4-4-2",
+    "home_strategy": "Defensive",
+    "away_strategy": "Balanced",
+    "home_submitted": true,
+    "away_submitted": true,
+    "goal_events": [
+      {
+        "minute": 15,
+        "side": "home",
+        "type": "Corner Kick",
+        "scorer": "Lars Almeida",
+        "scorer_position": "FW",
+        "scorer_id": "29"
+      },
+      {
+        "minute": 29,
+        "side": "away",
+        "type": "Strike",
+        "scorer": "Diego Vidal",
+        "scorer_position": "MF",
+        "scorer_id": "20"
+      },
+      {
+        "minute": 54,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Mateo Costa",
+        "scorer_position": "DF",
+        "scorer_id": "356"
+      }
+    ],
+    "home_starters": [
+      "54",
+      "333",
+      "160",
+      "183",
+      "356",
+      "125",
+      "245",
+      "345",
+      "256",
+      "218",
+      "29"
+    ],
+    "away_starters": [
+      "39",
+      "378",
+      "222",
+      "368",
+      "55",
+      "26",
+      "21",
+      "20",
+      "179",
+      "211",
+      "122"
+    ],
+    "gate": {
+      "price_tier": "Standard",
+      "price": 30,
+      "attendance": 8485,
+      "attendance_rate": 0.424,
+      "revenue": 254550,
+      "home_revenue": 216368,
+      "away_revenue": 38182,
+      "away_share_rate": 0.15
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 9,
+    "away_id": 6,
+    "home_goals": 0,
+    "away_goals": 3,
+    "forfeit": "home",
+    "home_formation": "4-4-2",
+    "away_formation": "4-5-1",
+    "home_strategy": "Balanced",
+    "away_strategy": "Balanced",
+    "home_submitted": false,
+    "away_submitted": true,
+    "forfeit_reason": {
+      "home": "no lineup submitted",
+      "away": null
+    },
+    "goal_events": [
+      {
+        "minute": 15,
+        "side": "away",
+        "type": "Free Kick",
+        "scorer": "Youssef Suarez",
+        "scorer_position": "FW",
+        "scorer_id": "392"
+      },
+      {
+        "minute": 45,
+        "side": "away",
+        "type": "Strike",
+        "scorer": "Enzo Larsson",
+        "scorer_position": "MF",
+        "scorer_id": "118"
+      },
+      {
+        "minute": 52,
+        "side": "away",
+        "type": "Strike",
+        "scorer": "Andre Barros",
+        "scorer_position": "MF",
+        "scorer_id": "384"
+      }
+    ],
+    "home_starters": [
+      "241",
+      "111",
+      "187",
+      "87",
+      "253",
+      "212",
+      "57",
+      "47",
+      "167",
+      "164",
+      "129"
+    ],
+    "away_starters": [
+      "127",
+      "41",
+      "204",
+      "324",
+      "347",
+      "116",
+      "118",
+      "61",
+      "45",
+      "384",
+      "392"
+    ],
+    "gate": {
+      "price_tier": null,
+      "price": 0,
+      "attendance": 0,
+      "attendance_rate": 0,
+      "revenue": 0,
+      "home_revenue": 0,
+      "away_revenue": 37912,
+      "away_share_rate": 0,
+      "home_forfeit_gate": 0,
+      "away_forfeit_gate": 37912,
+      "forfeit_gate": 252750
+    }
+  },
+  {
+    "round": 3,
+    "stage": "regular",
+    "home_id": 7,
+    "away_id": 8,
+    "home_goals": 2,
+    "away_goals": 0,
+    "home_formation": "3-5-2",
+    "away_formation": "5-3-2",
+    "home_strategy": "Balanced",
+    "away_strategy": "Defensive",
+    "home_submitted": true,
+    "away_submitted": true,
+    "goal_events": [
+      {
+        "minute": 8,
+        "side": "home",
+        "type": "Penalty Kick",
+        "scorer": "Stefan Ivanov",
+        "scorer_position": "FW",
+        "scorer_id": "188"
+      },
+      {
+        "minute": 81,
+        "side": "home",
+        "type": "Strike",
+        "scorer": "Stefan Ivanov",
+        "scorer_position": "FW",
+        "scorer_id": "188"
+      }
+    ],
+    "home_starters": [
+      "150",
+      "220",
+      "6",
+      "76",
+      "131",
+      "319",
+      "185",
+      "38",
+      "380",
+      "293",
+      "188"
+    ],
+    "away_starters": [
+      "344",
+      "78",
+      "259",
+      "272",
+      "303",
+      "323",
+      "16",
+      "139",
+      "182",
+      "12",
+      "375"
+    ],
+    "gate": {
+      "price_tier": "Standard",
+      "price": 30,
+      "attendance": 8425,
+      "attendance_rate": 0.421,
+      "revenue": 252750,
+      "home_revenue": 225986,
+      "away_revenue": 26764,
+      "away_share_rate": 0.106
+    }
   }
 ]
