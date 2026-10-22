@@ -91,12 +91,24 @@
    "treatment": "recovery",
    "submitted_at": "2026-10-15T16:45:07.313Z",
    "cost": 50000
+  },
+  {
+   "id": "6|4|392|2026-10-22T16:38:45.580Z",
+   "team_id": "6",
+   "round": 4,
+   "player_id": "392",
+   "player_name": "Youssef Suarez",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-22T16:38:45.580Z",
+   "injured_until_before": 4,
+   "injured_until_after": 3,
+   "cost": 75000
   }
  ],
  "voided": [],
  "team_spend": {
   "2": 125000,
-  "6": 200000,
+  "6": 275000,
   "16": 150000,
   "11": 75000,
   "5": 75000,
@@ -111,6 +123,7 @@
    "378": {
     "levels": 1
    }
-  }
+  },
+  "4": {}
  }
 }
