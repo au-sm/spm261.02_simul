@@ -103,6 +103,40 @@
    "injured_until_before": 4,
    "injured_until_after": 3,
    "cost": 75000
+  },
+  {
+   "id": "12|4|195|2026-10-25T21:57:47.464Z",
+   "team_id": "12",
+   "round": 4,
+   "player_id": "195",
+   "player_name": "Nico Moreno",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-25T21:57:47.464Z",
+   "injured_until_before": 4,
+   "injured_until_after": 3,
+   "cost": 75000
+  },
+  {
+   "id": "12|4|189|2026-10-25T21:58:23.127Z",
+   "team_id": "12",
+   "round": 4,
+   "player_id": "189",
+   "player_name": "Rui Duarte",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-25T21:58:23.127Z",
+   "injured_until_before": 5,
+   "injured_until_after": 4,
+   "cost": 75000
+  },
+  {
+   "id": "12|4|15|2026-10-25T22:02:25.140Z",
+   "team_id": "12",
+   "round": 4,
+   "player_id": "15",
+   "player_name": "Hassan Almeida",
+   "treatment": "recovery",
+   "submitted_at": "2026-10-25T22:02:25.140Z",
+   "cost": 50000
   }
  ],
  "voided": [],
@@ -113,7 +147,8 @@
   "11": 75000,
   "5": 75000,
   "8": 75000,
-  "10": 50000
+  "10": 50000,
+  "12": 200000
  },
  "boosts": {
   "3": {
@@ -124,6 +159,10 @@
     "levels": 1
    }
   },
-  "4": {}
+  "4": {
+   "15": {
+    "levels": 1
+   }
+  }
  }
 }
