@@ -9,6 +9,16 @@
  * Manage deployments > edit the existing deployment > New version --
  * keeps the same /exec URL, no config.js change needed.
  *
+ * AI COACH SETUP (this version, 2026-10-26; coach tuned for performance
+ *   and strategy questions):
+ *   1. Replace ALL code in the Apps Script editor with this file.
+ *   2. Project Settings > Script Properties > Add property:
+ *      GEMINI_API_KEY = your key from aistudio.google.com (never put
+ *      the key in this file, the repo or Discord).
+ *   3. Pick testCoachKey in the function dropdown > Run. The log should
+ *      say "OK via gemini-3.5-flash-lite: ...".
+ *   4. Deploy > Manage deployments > edit > New version > Deploy.
+ *
  * PIN CHECKING IS REAL HERE, unlike the Claude-artifact version this
  * replaced -- this runs server-side, so a wrong/missing PIN is
  * actually rejected, not just a client-side hash comparison a student
@@ -23,6 +33,9 @@
  *   SponsorshipDeals -- team_id | category | brand | final_revenue | final_clause
  *                    | rep_team_id | submitted_at
  *   LocalTVDeals -- team_id | final_revenue | final_clause | rep_team_id | submitted_at
+ *   Coach Log    -- timestamp | team_id | team_name | question | answer | model
+ *                    (AI Coach exchanges, see handleCoachChat_; needs the
+ *                    GEMINI_API_KEY script property)
  *   HealthTreatments -- team_id | round | player_id | player_name | treatment | submitted_at
  *                    (Player Health Hub requests; engine/health.py applies or voids them)
  *                    (one row per team, ever -- a Local TV Deal is negotiated once)
@@ -310,6 +323,201 @@ function committedOutgoingCount_(trades, teamId) {
   return total;
 }
 
+// ---------------------------------------------------------------------------
+// AI COACH (type "coach_chat", page /coach/). The model call happens HERE,
+// server-side, so the API key never reaches a browser or the public repo:
+// it lives in Project Settings > Script Properties as GEMINI_API_KEY
+// (optional GEMINI_MODEL overrides the first model tried). The team
+// briefing comes from data/coach_context.json on GitHub Pages (built by
+// engine/build_coach_context.py every auto-resolve cycle) and is looked
+// up by the PIN-checked team_id, never taken from the request body, so a
+// student can't feed the coach another team's data. That file carries no
+// PINs, grades, forfeit reasons or sponsor base prices.
+// Every exchange is logged to the "Coach Log" tab for the instructor.
+// ---------------------------------------------------------------------------
+var COACH_CONTEXT_URL = "https://au-sm.github.io/spm261.02_simul/data/coach_context.json";
+// Tried in order. 3.5 Flash-Lite has the largest free daily quota; Google
+// limited 2.5 access on 2026-09-18 to keys that used it recently, so a new
+// key may only reach the 3.x models -- 2.5 stays last as a fallback.
+var COACH_MODELS = ["gemini-3.5-flash-lite", "gemini-3.8-flash", "gemini-2.5-flash"];
+var COACH_MAX_PER_HOUR = 40;      // per team -- keeps one team from burning the free quota
+var COACH_MAX_MESSAGE = 800;      // characters per student message
+var COACH_MAX_HISTORY = 10;       // earlier turns resent for continuity
+
+var COACH_INSTRUCTIONS = [
+  "You are the AI Coach for the {LEAGUE}, a front-office simulation in SPM261 Introduction to Sport Management at Arcadia University.",
+  "Each student is the owner and general manager of one club. You are their front-office advisor, talking to the owner of {TEAM}.",
+  "Your job is to help them understand how their team is performing and why, and to think through strategy so they make better decisions.",
+  "",
+  "HOW TO ANSWER",
+  "- Lead with analysis, not a question. Say what the numbers show, explain the likely reason using how the league actually works (rulebook section 9 for match results, section 8 for formations and strategy, section 10 for tickets and attendance), then give 2-3 concrete options with the tradeoff of each.",
+  "- Performance questions: compare them with the league (their attack and defense ranks, home vs away form, the league table), look at the formations and strategies they used and how those went, who is scoring and starting, and player condition and injuries.",
+  "- Strategy questions: use the OPPONENT SCOUTING report and LEAGUE TRENDS. Match their strengths (OVR by player and line, ATT/DEF/PACE/PHY) against the opponent's, and say which data supports each option. Note when a league trend is based on only a few matches.",
+  "- Business questions (tickets, sponsors, TV, cash, payroll, health spending): use their finance lines and tie the answer to sport management concepts by name, such as price elasticity, demand drivers, sponsorship fit and activation, broadcast rights value, payroll efficiency, risk and opportunity cost, fan identification.",
+  "- Quote their actual numbers and players by name. Cite the rulebook section when a rule matters.",
+  "- Keep it readable: under 200 words, short sentences, at most 4 bullets. Finish with one short question that pushes them toward their own decision, unless they only asked a factual rule question.",
+  "",
+  "LIMITS",
+  "- The final call is theirs. You may say which option the data favors and why, but never hand them a finished lineup, ticket price or deal as 'the answer'.",
+  "- Never write a decision rationale, lineup justification or any graded text for them. If asked, say that part has to be in their own words and offer to react to their own draft ideas instead.",
+  "- Never guess or reveal sponsors' hidden base prices or other teams' private negotiations. If you don't know a number, say so.",
+  "- You know nothing about any student's course grade. Don't speculate about grades or points earned.",
+  "- If the briefing doesn't contain something, say it isn't in your data rather than inventing it.",
+  "- If a question has nothing to do with the league or the course, steer back in one sentence.",
+].join("\n");
+
+function coachLogSheet_() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var log = ss.getSheetByName("Coach Log");
+  if (!log) {
+    log = ss.insertSheet("Coach Log");
+    log.appendRow(["timestamp", "team_id", "team_name", "question", "answer", "model"]);
+    log.getRange(1, 1, 1, 6).setFontWeight("bold");
+    log.setFrozenRows(1);
+  }
+  return log;
+}
+
+function coachContext_() {
+  var cache = CacheService.getScriptCache();
+  var hit = cache.get("coach_ctx_meta");
+  if (hit) {
+    var meta = JSON.parse(hit);
+    var parts = cache.getAll(meta.keys);
+    if (meta.keys.every(function (k) { return parts[k] !== undefined && parts[k] !== null; })) {
+      return JSON.parse(meta.keys.map(function (k) { return parts[k]; }).join(""));
+    }
+  }
+  var resp = UrlFetchApp.fetch(COACH_CONTEXT_URL + "?t=" + Date.now(), { muteHttpExceptions: true });
+  if (resp.getResponseCode() !== 200) throw new Error("coach context unavailable (" + resp.getResponseCode() + ")");
+  var text = resp.getContentText();
+  // CacheService caps one value at 100KB, so the file is stored in chunks
+  var keys = [], chunks = {};
+  for (var i = 0, n = 0; i < text.length; i += 45000, n++) {
+    keys.push("coach_ctx_" + n);
+    chunks["coach_ctx_" + n] = text.substring(i, i + 45000);
+  }
+  try {
+    cache.putAll(chunks, 600);
+    cache.put("coach_ctx_meta", JSON.stringify({ keys: keys }), 600);
+  } catch (err) { /* cache is an optimisation only */ }
+  return JSON.parse(text);
+}
+
+function coachRateOk_(teamId) {
+  var cache = CacheService.getScriptCache();
+  var key = "coach_rate_" + teamId + "_" + Math.floor(Date.now() / 3600000);
+  var used = Number(cache.get(key) || 0);
+  if (used >= COACH_MAX_PER_HOUR) return false;
+  cache.put(key, String(used + 1), 3700);
+  return true;
+}
+
+function coachCallModel_(system, contents) {
+  var key = PropertiesService.getScriptProperties().getProperty("GEMINI_API_KEY");
+  if (!key) return { ok: false, reason: "no_key" };
+  var preferred = PropertiesService.getScriptProperties().getProperty("GEMINI_MODEL");
+  var models = preferred ? [preferred].concat(COACH_MODELS.filter(function (m) { return m !== preferred; })) : COACH_MODELS;
+  var lastErr = "";
+  for (var i = 0; i < models.length; i++) {
+    // 3.x models think by default and the thinking counts toward
+    // maxOutputTokens, so they get more room and the default temperature
+    var gen = { maxOutputTokens: 2048 };
+    if (models[i].indexOf("2.5-flash") > -1) {
+      gen = { temperature: 0.7, maxOutputTokens: 700, thinkingConfig: { thinkingBudget: 0 } };
+    }
+    var resp = UrlFetchApp.fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/" + models[i] + ":generateContent",
+      {
+        method: "post", contentType: "application/json", muteHttpExceptions: true,
+        headers: { "x-goog-api-key": key },
+        payload: JSON.stringify({ system_instruction: { parts: [{ text: system }] }, contents: contents, generationConfig: gen }),
+      });
+    var code = resp.getResponseCode();
+    if (code === 200) {
+      var data = JSON.parse(resp.getContentText());
+      var cand = (data.candidates || [])[0];
+      var text = cand && cand.content && (cand.content.parts || []).map(function (p) { return p.text || ""; }).join("").trim();
+      if (text) return { ok: true, text: text, model: models[i] };
+      lastErr = "empty reply (" + ((cand && cand.finishReason) || "no candidate") + ")";
+    } else {
+      lastErr = code + " " + resp.getContentText().substring(0, 200);
+    }
+  }
+  return { ok: false, reason: "model_error", detail: lastErr };
+}
+
+// Run this once from the Apps Script editor (select testCoachKey > Run)
+// after setting GEMINI_API_KEY. The execution log shows which model
+// answered, or the exact error if none did. Nothing is written to the Sheet.
+function testCoachKey() {
+  var r = coachCallModel_("You are a test. Reply with one short sentence.",
+                          [{ role: "user", parts: [{ text: "Say hello to the SPM261 league." }] }]);
+  Logger.log(r.ok ? "OK via " + r.model + ": " + r.text : "FAILED (" + r.reason + "): " + (r.detail || "GEMINI_API_KEY not set"));
+}
+
+function handleCoachChat_(body, team) {
+  var ctx;
+  try {
+    ctx = coachContext_();
+  } catch (err) {
+    return jsonOut_({ ok: false, error: "The coach can't load your team data right now. Try again in a minute." });
+  }
+  var brief = (ctx.teams || {})[String(team.id)];
+  if (!brief) return jsonOut_({ ok: false, error: "No coach briefing for this team yet." });
+
+  // hello: PIN already checked by doPost -- just confirm the session, no model call
+  if (body.hello) {
+    return jsonOut_({ ok: true, team_id: team.id, team_name: brief.name, position: brief.position,
+                      record: brief.record, points: brief.points, cash: brief.cash, next: brief.next,
+                      generated_at: ctx.generated_at });
+  }
+
+  var message = String(body.message || "").trim();
+  if (!message) return jsonOut_({ ok: false, error: "Type a question for your coach." });
+  if (message.length > COACH_MAX_MESSAGE) message = message.substring(0, COACH_MAX_MESSAGE);
+  if (!coachRateOk_(team.id)) {
+    return jsonOut_({ ok: false, error: "Your team has used its " + COACH_MAX_PER_HOUR + " coach messages for this hour. Try again later." });
+  }
+
+  var system = COACH_INSTRUCTIONS.replace("{LEAGUE}", ctx.league_name).replace("{TEAM}", brief.name) +
+    "\n\nTEAM BRIEFING (data as of " + ctx.generated_at + ")\n" + brief.briefing +
+    "\n\nLEAGUE TABLE\n" + ctx.league_table +
+    "\n\nRULEBOOK\n" + ctx.rulebook;
+
+  var history = Array.isArray(body.history) ? body.history.slice(-COACH_MAX_HISTORY) : [];
+  var contents = [];
+  history.forEach(function (h) {
+    var role = h && h.role === "coach" ? "model" : "user";
+    var text = String((h && h.text) || "").substring(0, 1500);
+    if (!text) return;
+    if (contents.length && contents[contents.length - 1].role === role) {
+      contents[contents.length - 1].parts[0].text += "\n" + text;
+    } else {
+      contents.push({ role: role, parts: [{ text: text }] });
+    }
+  });
+  while (contents.length && contents[0].role !== "user") contents.shift();
+  if (contents.length && contents[contents.length - 1].role === "user") contents.pop();
+  contents.push({ role: "user", parts: [{ text: message }] });
+
+  var result = coachCallModel_(system, contents);
+  var answer, model;
+  if (result.ok) {
+    answer = result.text; model = result.model;
+  } else if (result.reason === "no_key") {
+    answer = "The AI Coach isn't switched on yet. Your instructor still needs to connect it. Check back soon!";
+    model = "no_key";
+  } else {
+    answer = "Your coach is busy with other teams right now. Give it a minute and ask again.";
+    model = "error: " + (result.detail || "");
+  }
+  try {
+    coachLogSheet_().appendRow([new Date().toISOString(), team.id, brief.name, message, answer, model]);
+  } catch (err) { /* logging must never block the reply */ }
+  return jsonOut_({ ok: true, reply: answer, fallback: !result.ok });
+}
+
 function doGet(e) {
   var sheets = ensureSheets_();
   var params = (e && e.parameter) || {};
@@ -413,6 +621,8 @@ function doPost(e) {
 
   var pinCheck = checkPin_(teams, body.team_id, body.pin);
   if (!pinCheck.ok) return jsonOut_({ ok: false, error: pinCheck.error });
+
+  if (body.type === "coach_chat") return handleCoachChat_(body, pinCheck.team);
 
   var now = new Date().toISOString();
 
