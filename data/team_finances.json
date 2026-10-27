@@ -260,7 +260,7 @@
     },
     "12": {
       "ticket_revenue": 537827,
-      "sponsorship_revenue": 4780000,
+      "sponsorship_revenue": 9320000,
       "tv_revenue": 0,
       "sponsors_owned": [
         {
@@ -278,6 +278,24 @@
           "mode": "live",
           "outcome": "accepted",
           "final_revenue": 3000000,
+          "final_clause": "strict",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Financial Services",
+          "sponsor": "Mastercard",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 2170000,
+          "final_clause": "strict",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Airline",
+          "sponsor": "Qatar Airways",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 2370000,
           "final_clause": "strict",
           "sponsor_rep_team_id": null
         }

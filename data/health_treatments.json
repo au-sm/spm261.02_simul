@@ -171,6 +171,16 @@
    "injured_until_before": 4,
    "injured_until_after": 3,
    "cost": 75000
+  },
+  {
+   "id": "12|4|112|2026-10-27T23:40:29.578Z",
+   "team_id": "12",
+   "round": 4,
+   "player_id": "112",
+   "player_name": "Cesar Mensah",
+   "treatment": "sports_science",
+   "submitted_at": "2026-10-27T23:40:29.578Z",
+   "cost": 125000
   }
  ],
  "voided": [],
@@ -182,7 +192,7 @@
   "5": 75000,
   "8": 75000,
   "10": 125000,
-  "12": 200000,
+  "12": 325000,
   "17": 375000,
   "7": 125000
  },
@@ -203,6 +213,9 @@
     "set": "Average"
    },
    "319": {
+    "levels": 2
+   },
+   "112": {
     "levels": 2
    }
   }
