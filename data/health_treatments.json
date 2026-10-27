@@ -137,6 +137,40 @@
    "treatment": "recovery",
    "submitted_at": "2026-10-25T22:02:25.140Z",
    "cost": 50000
+  },
+  {
+   "id": "17|4|387|2026-10-27T16:45:22.399Z",
+   "team_id": "17",
+   "round": 4,
+   "player_id": "387",
+   "player_name": "Radek Bauer",
+   "treatment": "rehab_elite",
+   "submitted_at": "2026-10-27T16:45:22.399Z",
+   "injured_until_before": 4,
+   "injured_until_after": 3,
+   "cost": 375000
+  },
+  {
+   "id": "7|4|319|2026-10-27T16:46:59.041Z",
+   "team_id": "7",
+   "round": 4,
+   "player_id": "319",
+   "player_name": "Sami Fischer",
+   "treatment": "sports_science",
+   "submitted_at": "2026-10-27T16:46:59.041Z",
+   "cost": 125000
+  },
+  {
+   "id": "10|4|122|2026-10-27T16:47:07.110Z",
+   "team_id": "10",
+   "round": 4,
+   "player_id": "122",
+   "player_name": "Lars Vidal",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-27T16:47:07.110Z",
+   "injured_until_before": 4,
+   "injured_until_after": 3,
+   "cost": 75000
   }
  ],
  "voided": [],
@@ -147,8 +181,10 @@
   "11": 75000,
   "5": 75000,
   "8": 75000,
-  "10": 50000,
-  "12": 200000
+  "10": 125000,
+  "12": 200000,
+  "17": 375000,
+  "7": 125000
  },
  "boosts": {
   "3": {
@@ -162,6 +198,12 @@
   "4": {
    "15": {
     "levels": 1
+   },
+   "387": {
+    "set": "Average"
+   },
+   "319": {
+    "levels": 2
    }
   }
  }
