@@ -1,7 +1,7 @@
 {
   "teams": {
     "0": {
-      "ticket_revenue": 939305,
+      "ticket_revenue": 1321527,
       "sponsorship_revenue": 13200000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -54,7 +54,7 @@
       "local_tv_revenue": 0
     },
     "1": {
-      "ticket_revenue": 948673,
+      "ticket_revenue": 1400677,
       "sponsorship_revenue": 16110000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -178,7 +178,7 @@
       "local_tv_revenue": 0
     },
     "3": {
-      "ticket_revenue": 12573,
+      "ticket_revenue": 97285,
       "sponsorship_revenue": 3500000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -195,7 +195,7 @@
       "local_tv_revenue": 0
     },
     "4": {
-      "ticket_revenue": 566905,
+      "ticket_revenue": 622043,
       "sponsorship_revenue": 10600000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -257,7 +257,7 @@
       "local_tv_revenue": 0
     },
     "5": {
-      "ticket_revenue": 606790,
+      "ticket_revenue": 915076,
       "sponsorship_revenue": 1100000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -274,7 +274,7 @@
       "local_tv_revenue": 0
     },
     "6": {
-      "ticket_revenue": 392238,
+      "ticket_revenue": 418182,
       "sponsorship_revenue": 7870000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -336,7 +336,7 @@
       "local_tv_revenue": 0
     },
     "7": {
-      "ticket_revenue": 598326,
+      "ticket_revenue": 948578,
       "sponsorship_revenue": 8700000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -398,7 +398,7 @@
       "local_tv_revenue": 0
     },
     "8": {
-      "ticket_revenue": 642793,
+      "ticket_revenue": 668207,
       "sponsorship_revenue": 11000000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -477,8 +477,8 @@
       "local_tv_revenue": 0
     },
     "10": {
-      "ticket_revenue": 619381,
-      "sponsorship_revenue": 3650000,
+      "ticket_revenue": 686647,
+      "sponsorship_revenue": 4700000,
       "tv_revenue": 0,
       "sponsors_owned": [
         {
@@ -498,12 +498,21 @@
           "final_revenue": 1530000,
           "final_clause": "loose",
           "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Technology",
+          "sponsor": "Verizon",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1050000,
+          "final_clause": "none",
+          "sponsor_rep_team_id": null
         }
       ],
       "local_tv_revenue": 0
     },
     "11": {
-      "ticket_revenue": 886252,
+      "ticket_revenue": 1181516,
       "sponsorship_revenue": 11840000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -609,7 +618,7 @@
       "local_tv_revenue": 0
     },
     "13": {
-      "ticket_revenue": 357789,
+      "ticket_revenue": 514204,
       "sponsorship_revenue": 10910000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -671,7 +680,7 @@
       "local_tv_revenue": 0
     },
     "14": {
-      "ticket_revenue": 1033186,
+      "ticket_revenue": 1065882,
       "sponsorship_revenue": 9300000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -733,7 +742,7 @@
       "local_tv_revenue": 0
     },
     "15": {
-      "ticket_revenue": 369495,
+      "ticket_revenue": 401123,
       "sponsorship_revenue": 10920000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -795,7 +804,7 @@
       "local_tv_revenue": 0
     },
     "16": {
-      "ticket_revenue": 506764,
+      "ticket_revenue": 717518,
       "sponsorship_revenue": 10300000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -857,7 +866,7 @@
       "local_tv_revenue": 0
     },
     "17": {
-      "ticket_revenue": 648560,
+      "ticket_revenue": 661570,
       "sponsorship_revenue": 8700000,
       "tv_revenue": 0,
       "sponsors_owned": [
@@ -919,14 +928,14 @@
       "local_tv_revenue": 0
     },
     "18": {
-      "ticket_revenue": 292261,
+      "ticket_revenue": 636961,
       "sponsorship_revenue": 0,
       "tv_revenue": 0,
       "sponsors_owned": [],
       "local_tv_revenue": 0
     },
     "19": {
-      "ticket_revenue": 661523,
+      "ticket_revenue": 707359,
       "sponsorship_revenue": 14280000,
       "tv_revenue": 0,
       "sponsors_owned": [
