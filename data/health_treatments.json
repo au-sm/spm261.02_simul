@@ -201,21 +201,112 @@
    "treatment": "recovery",
    "submitted_at": "2026-10-29T00:06:06.933Z",
    "cost": 50000
+  },
+  {
+   "id": "17|5|43|2026-10-29T17:09:21.224Z",
+   "team_id": "17",
+   "round": 5,
+   "player_id": "43",
+   "player_name": "Youssef Vidal",
+   "treatment": "rehab_elite",
+   "submitted_at": "2026-10-29T17:09:21.224Z",
+   "injured_until_before": 5,
+   "injured_until_after": 4,
+   "cost": 375000
+  },
+  {
+   "id": "6|5|347|2026-10-29T17:11:26.846Z",
+   "team_id": "6",
+   "round": 5,
+   "player_id": "347",
+   "player_name": "Rui Krause",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-29T17:11:26.846Z",
+   "injured_until_before": 5,
+   "injured_until_after": 4,
+   "cost": 75000
+  },
+  {
+   "id": "19|5|175|2026-10-29T17:11:34.122Z",
+   "team_id": "19",
+   "round": 5,
+   "player_id": "175",
+   "player_name": "Adrian Horvat",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-29T17:11:34.122Z",
+   "injured_until_before": 5,
+   "injured_until_after": 4,
+   "cost": 75000
+  },
+  {
+   "id": "2|5|361|2026-10-29T17:11:38.699Z",
+   "team_id": "2",
+   "round": 5,
+   "player_id": "361",
+   "player_name": "Rafael Horvat",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-10-29T17:11:38.699Z",
+   "injured_until_before": 5,
+   "injured_until_after": 4,
+   "cost": 75000
+  },
+  {
+   "id": "12|5|112|2026-10-29T17:13:00.210Z",
+   "team_id": "12",
+   "round": 5,
+   "player_id": "112",
+   "player_name": "Cesar Mensah",
+   "treatment": "rehab_elite",
+   "submitted_at": "2026-10-29T17:13:00.210Z",
+   "injured_until_before": 6,
+   "injured_until_after": 4,
+   "cost": 375000
+  },
+  {
+   "id": "2|5|330|2026-10-29T17:13:08.609Z",
+   "team_id": "2",
+   "round": 5,
+   "player_id": "330",
+   "player_name": "Rafael Kucera",
+   "treatment": "recovery",
+   "submitted_at": "2026-10-29T17:13:08.609Z",
+   "cost": 50000
+  },
+  {
+   "id": "12|5|240|2026-10-29T17:13:20.895Z",
+   "team_id": "12",
+   "round": 5,
+   "player_id": "240",
+   "player_name": "Luca Toure",
+   "treatment": "sports_science",
+   "submitted_at": "2026-10-29T17:13:20.895Z",
+   "cost": 125000
+  },
+  {
+   "id": "12|5|270|2026-10-29T17:13:53.949Z",
+   "team_id": "12",
+   "round": 5,
+   "player_id": "270",
+   "player_name": "Hassan Horvat",
+   "treatment": "sports_science",
+   "submitted_at": "2026-10-29T17:13:53.949Z",
+   "cost": 125000
   }
  ],
  "voided": [],
  "team_spend": {
-  "2": 125000,
-  "6": 275000,
+  "2": 250000,
+  "6": 350000,
   "16": 150000,
   "11": 125000,
   "5": 75000,
   "8": 75000,
   "10": 125000,
-  "12": 325000,
-  "17": 375000,
+  "12": 950000,
+  "17": 750000,
   "7": 125000,
-  "4": 50000
+  "4": 50000,
+  "19": 75000
  },
  "boosts": {
   "3": {
@@ -246,6 +337,21 @@
    },
    "152": {
     "levels": 1
+   },
+   "43": {
+    "set": "Average"
+   },
+   "112": {
+    "set": "Average"
+   },
+   "330": {
+    "levels": 1
+   },
+   "240": {
+    "levels": 2
+   },
+   "270": {
+    "levels": 2
    }
   }
  }
