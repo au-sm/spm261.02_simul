@@ -36,7 +36,7 @@
     },
     "2": {
       "ticket_revenue": 983244,
-      "sponsorship_revenue": 2000000,
+      "sponsorship_revenue": 11250000,
       "tv_revenue": 0,
       "sponsors_owned": [
         {
@@ -46,6 +46,51 @@
           "outcome": "accepted",
           "final_revenue": 2000000,
           "final_clause": "standard",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Kit / Apparel",
+          "sponsor": "New Balance",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1250000,
+          "final_clause": "loose",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Technology",
+          "sponsor": "Sony",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 2000000,
+          "final_clause": "standard",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Automotive",
+          "sponsor": "Ford",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1400000,
+          "final_clause": "standard",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Airline",
+          "sponsor": "Qatar Airways",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 2400000,
+          "final_clause": "strict",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Financial Services",
+          "sponsor": "Mastercard",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 2200000,
+          "final_clause": "strict",
           "sponsor_rep_team_id": null
         }
       ],
@@ -211,7 +256,7 @@
     },
     "7": {
       "ticket_revenue": 598326,
-      "sponsorship_revenue": 1500000,
+      "sponsorship_revenue": 8700000,
       "tv_revenue": 0,
       "sponsors_owned": [
         {
@@ -221,6 +266,51 @@
           "outcome": "accepted",
           "final_revenue": 1500000,
           "final_clause": "loose",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Beverage",
+          "sponsor": "Monster Energy",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1200000,
+          "final_clause": "loose",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Financial Services",
+          "sponsor": "PayPal",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1000000,
+          "final_clause": "loose",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Airline",
+          "sponsor": "Delta",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1600000,
+          "final_clause": "standard",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Automotive",
+          "sponsor": "Ford",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 1400000,
+          "final_clause": "standard",
+          "sponsor_rep_team_id": null
+        },
+        {
+          "category": "Technology",
+          "sponsor": "Sony",
+          "mode": "live",
+          "outcome": "accepted",
+          "final_revenue": 2000000,
+          "final_clause": "standard",
           "sponsor_rep_team_id": null
         }
       ],
