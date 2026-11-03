@@ -150,7 +150,12 @@
       "team_name": "Team 17",
       "market_tier": "Major Market",
       "base_revenue": 1200000,
-      "base_clause": "strict"
+      "base_clause": "strict",
+      "negotiated": true,
+      "mode": "live",
+      "negotiated_revenue": 1200000,
+      "final_clause": "strict",
+      "network_rep_team_id": null
     },
     {
       "team_id": 17,
