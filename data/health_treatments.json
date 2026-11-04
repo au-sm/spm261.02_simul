@@ -345,6 +345,46 @@
    "treatment": "recovery",
    "submitted_at": "2026-11-03T19:22:02.964Z",
    "cost": 50000
+  },
+  {
+   "id": "11|6|367|2026-11-04T01:20:13.134Z",
+   "team_id": "11",
+   "round": 6,
+   "player_id": "367",
+   "player_name": "Emil Fischer",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-04T01:20:13.134Z",
+   "cost": 50000
+  },
+  {
+   "id": "11|6|192|2026-11-04T01:20:45.142Z",
+   "team_id": "11",
+   "round": 6,
+   "player_id": "192",
+   "player_name": "Nikolai Horvat",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-04T01:20:45.142Z",
+   "cost": 50000
+  },
+  {
+   "id": "11|6|146|2026-11-04T01:22:37.544Z",
+   "team_id": "11",
+   "round": 6,
+   "player_id": "146",
+   "player_name": "Nikolai Wallin",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-04T01:22:37.544Z",
+   "cost": 50000
+  },
+  {
+   "id": "1|6|336|2026-11-04T03:41:12.252Z",
+   "team_id": "1",
+   "round": 6,
+   "player_id": "336",
+   "player_name": "Bruno Wallin",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-04T03:41:12.252Z",
+   "cost": 50000
   }
  ],
  "voided": [],
@@ -352,7 +392,7 @@
   "2": 250000,
   "6": 350000,
   "16": 150000,
-  "11": 125000,
+  "11": 275000,
   "5": 75000,
   "8": 75000,
   "10": 275000,
@@ -360,7 +400,8 @@
   "17": 1500000,
   "7": 125000,
   "4": 50000,
-  "19": 75000
+  "19": 75000,
+  "1": 50000
  },
  "boosts": {
   "3": {
@@ -422,6 +463,18 @@
     "levels": 1
    },
    "368": {
+    "levels": 1
+   },
+   "367": {
+    "levels": 1
+   },
+   "192": {
+    "levels": 1
+   },
+   "146": {
+    "levels": 1
+   },
+   "336": {
     "levels": 1
    }
   }
