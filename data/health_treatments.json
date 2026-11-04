@@ -291,6 +291,60 @@
    "treatment": "sports_science",
    "submitted_at": "2026-10-29T17:13:53.949Z",
    "cost": 125000
+  },
+  {
+   "id": "17|6|387|2026-11-03T17:22:32.347Z",
+   "team_id": "17",
+   "round": 6,
+   "player_id": "387",
+   "player_name": "Radek Bauer",
+   "treatment": "rehab_elite",
+   "submitted_at": "2026-11-03T17:22:32.347Z",
+   "injured_until_before": 8,
+   "injured_until_after": 5,
+   "cost": 375000
+  },
+  {
+   "id": "17|6|235|2026-11-03T17:22:48.426Z",
+   "team_id": "17",
+   "round": 6,
+   "player_id": "235",
+   "player_name": "Nikolai Ferreira",
+   "treatment": "rehab_elite",
+   "submitted_at": "2026-11-03T17:22:48.426Z",
+   "injured_until_before": 8,
+   "injured_until_after": 5,
+   "cost": 375000
+  },
+  {
+   "id": "10|6|20|2026-11-03T19:21:23.621Z",
+   "team_id": "10",
+   "round": 6,
+   "player_id": "20",
+   "player_name": "Diego Vidal",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-03T19:21:23.621Z",
+   "cost": 50000
+  },
+  {
+   "id": "10|6|211|2026-11-03T19:21:39.246Z",
+   "team_id": "10",
+   "round": 6,
+   "player_id": "211",
+   "player_name": "Andre Almeida",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-03T19:21:39.246Z",
+   "cost": 50000
+  },
+  {
+   "id": "10|6|368|2026-11-03T19:22:02.964Z",
+   "team_id": "10",
+   "round": 6,
+   "player_id": "368",
+   "player_name": "Mateo Almeida",
+   "treatment": "recovery",
+   "submitted_at": "2026-11-03T19:22:02.964Z",
+   "cost": 50000
   }
  ],
  "voided": [],
@@ -301,9 +355,9 @@
   "11": 125000,
   "5": 75000,
   "8": 75000,
-  "10": 125000,
+  "10": 275000,
   "12": 950000,
-  "17": 750000,
+  "17": 1500000,
   "7": 125000,
   "4": 50000,
   "19": 75000
@@ -352,6 +406,23 @@
    },
    "270": {
     "levels": 2
+   }
+  },
+  "6": {
+   "387": {
+    "set": "Average"
+   },
+   "235": {
+    "set": "Average"
+   },
+   "20": {
+    "levels": 1
+   },
+   "211": {
+    "levels": 1
+   },
+   "368": {
+    "levels": 1
    }
   }
  }
