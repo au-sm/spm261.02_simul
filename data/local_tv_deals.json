@@ -50,7 +50,12 @@
       "team_name": "Team 2",
       "market_tier": "Large Market",
       "base_revenue": 1000000,
-      "base_clause": "strict"
+      "base_clause": "strict",
+      "negotiated": true,
+      "mode": "live",
+      "negotiated_revenue": 1020000,
+      "final_clause": "standard",
+      "network_rep_team_id": null
     },
     {
       "team_id": 2,
