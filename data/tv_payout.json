@@ -1,0 +1,202 @@
+[
+  {
+    "team_id": 0,
+    "rank": 7,
+    "xi_star_power": 65.9,
+    "top3_star": false,
+    "signed": true,
+    "rate": 850000,
+    "national": 800000,
+    "local": 850000
+  },
+  {
+    "team_id": 1,
+    "rank": 6,
+    "xi_star_power": 72.9,
+    "top3_star": true,
+    "signed": true,
+    "rate": 1020000,
+    "national": 1300000,
+    "local": 1173000
+  },
+  {
+    "team_id": 2,
+    "rank": 3,
+    "xi_star_power": 58.4,
+    "top3_star": false,
+    "signed": true,
+    "rate": 990000,
+    "national": 1100000,
+    "local": 990000
+  },
+  {
+    "team_id": 3,
+    "rank": 19,
+    "xi_star_power": 55.2,
+    "top3_star": false,
+    "signed": true,
+    "rate": 1000000,
+    "national": 800000,
+    "local": 1000000
+  },
+  {
+    "team_id": 4,
+    "rank": 4,
+    "xi_star_power": 75.6,
+    "top3_star": true,
+    "signed": true,
+    "rate": 850000,
+    "national": 1300000,
+    "local": 977500
+  },
+  {
+    "team_id": 5,
+    "rank": 17,
+    "xi_star_power": 57.8,
+    "top3_star": false,
+    "signed": true,
+    "rate": 810000,
+    "national": 800000,
+    "local": 810000
+  },
+  {
+    "team_id": 6,
+    "rank": 14,
+    "xi_star_power": 63.1,
+    "top3_star": false,
+    "signed": true,
+    "rate": 1200000,
+    "national": 800000,
+    "local": 1200000
+  },
+  {
+    "team_id": 7,
+    "rank": 13,
+    "xi_star_power": 54.5,
+    "top3_star": false,
+    "signed": true,
+    "rate": 550000,
+    "national": 800000,
+    "local": 550000
+  },
+  {
+    "team_id": 8,
+    "rank": 5,
+    "xi_star_power": 58.2,
+    "top3_star": false,
+    "signed": true,
+    "rate": 700000,
+    "national": 800000,
+    "local": 700000
+  },
+  {
+    "team_id": 9,
+    "rank": 20,
+    "xi_star_power": 57.0,
+    "top3_star": false,
+    "signed": false,
+    "rate": 700000,
+    "national": 800000,
+    "local": 700000
+  },
+  {
+    "team_id": 10,
+    "rank": 2,
+    "xi_star_power": 57.2,
+    "top3_star": false,
+    "signed": true,
+    "rate": 1150000,
+    "national": 1400000,
+    "local": 1150000
+  },
+  {
+    "team_id": 11,
+    "rank": 8,
+    "xi_star_power": 60.6,
+    "top3_star": false,
+    "signed": true,
+    "rate": 550000,
+    "national": 800000,
+    "local": 550000
+  },
+  {
+    "team_id": 12,
+    "rank": 15,
+    "xi_star_power": 60.9,
+    "top3_star": false,
+    "signed": false,
+    "rate": 1000000,
+    "national": 800000,
+    "local": 1000000
+  },
+  {
+    "team_id": 13,
+    "rank": 18,
+    "xi_star_power": 53.5,
+    "top3_star": false,
+    "signed": false,
+    "rate": 550000,
+    "national": 800000,
+    "local": 550000
+  },
+  {
+    "team_id": 14,
+    "rank": 1,
+    "xi_star_power": 71.9,
+    "top3_star": true,
+    "signed": true,
+    "rate": 1200000,
+    "national": 2300000,
+    "local": 1380000
+  },
+  {
+    "team_id": 15,
+    "rank": 12,
+    "xi_star_power": 57.7,
+    "top3_star": false,
+    "signed": false,
+    "rate": 850000,
+    "national": 800000,
+    "local": 850000
+  },
+  {
+    "team_id": 16,
+    "rank": 16,
+    "xi_star_power": 49.6,
+    "top3_star": false,
+    "signed": true,
+    "rate": 1200000,
+    "national": 800000,
+    "local": 1200000
+  },
+  {
+    "team_id": 17,
+    "rank": 9,
+    "xi_star_power": 57.5,
+    "top3_star": false,
+    "signed": false,
+    "rate": 700000,
+    "national": 800000,
+    "local": 700000
+  },
+  {
+    "team_id": 18,
+    "rank": 11,
+    "xi_star_power": 63.7,
+    "top3_star": false,
+    "signed": true,
+    "rate": 540000,
+    "national": 800000,
+    "local": 540000
+  },
+  {
+    "team_id": 19,
+    "rank": 10,
+    "xi_star_power": 66.3,
+    "top3_star": false,
+    "signed": true,
+    "rate": 690000,
+    "national": 800000,
+    "local": 690000
+  }
+]

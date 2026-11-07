@@ -3,7 +3,7 @@
     "0": {
       "ticket_revenue": 1355988,
       "sponsorship_revenue": 13200000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -51,12 +51,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 850000
     },
     "1": {
       "ticket_revenue": 1457009,
       "sponsorship_revenue": 16110000,
-      "tv_revenue": 0,
+      "tv_revenue": 1300000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -113,12 +113,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1173000
     },
     "2": {
       "ticket_revenue": 1275249,
       "sponsorship_revenue": 11250000,
-      "tv_revenue": 0,
+      "tv_revenue": 1100000,
       "sponsors_owned": [
         {
           "category": "Beverage",
@@ -175,12 +175,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 990000
     },
     "3": {
       "ticket_revenue": 97285,
       "sponsorship_revenue": 3500000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -192,12 +192,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1000000
     },
     "4": {
       "ticket_revenue": 892024,
       "sponsorship_revenue": 10600000,
-      "tv_revenue": 0,
+      "tv_revenue": 1300000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -254,12 +254,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 977500
     },
     "5": {
       "ticket_revenue": 955345,
       "sponsorship_revenue": 1100000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Technology",
@@ -271,12 +271,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 810000
     },
     "6": {
       "ticket_revenue": 761742,
       "sponsorship_revenue": 7870000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Financial Services",
@@ -333,12 +333,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1200000
     },
     "7": {
       "ticket_revenue": 991613,
       "sponsorship_revenue": 8700000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -395,12 +395,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 550000
     },
     "8": {
       "ticket_revenue": 1026595,
       "sponsorship_revenue": 11000000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -457,12 +457,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 700000
     },
     "9": {
       "ticket_revenue": 184995,
       "sponsorship_revenue": 2000000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Beverage",
@@ -474,12 +474,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 700000
     },
     "10": {
       "ticket_revenue": 904875,
       "sponsorship_revenue": 4700000,
-      "tv_revenue": 0,
+      "tv_revenue": 1400000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -509,12 +509,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1150000
     },
     "11": {
       "ticket_revenue": 1198194,
       "sponsorship_revenue": 11840000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -571,12 +571,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 550000
     },
     "12": {
       "ticket_revenue": 1016783,
       "sponsorship_revenue": 9320000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Beverage",
@@ -615,12 +615,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1000000
     },
     "13": {
       "ticket_revenue": 514204,
       "sponsorship_revenue": 10910000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -677,12 +677,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 550000
     },
     "14": {
       "ticket_revenue": 1463821,
       "sponsorship_revenue": 9300000,
-      "tv_revenue": 0,
+      "tv_revenue": 2300000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -739,12 +739,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1380000
     },
     "15": {
       "ticket_revenue": 735023,
       "sponsorship_revenue": 10920000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Financial Services",
@@ -801,12 +801,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 850000
     },
     "16": {
       "ticket_revenue": 755237,
       "sponsorship_revenue": 10300000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -863,12 +863,12 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 1200000
     },
     "17": {
       "ticket_revenue": 995140,
       "sponsorship_revenue": 8700000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Financial Services",
@@ -925,19 +925,19 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 700000
     },
     "18": {
       "ticket_revenue": 670193,
       "sponsorship_revenue": 0,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 540000
     },
     "19": {
       "ticket_revenue": 1136659,
       "sponsorship_revenue": 14280000,
-      "tv_revenue": 0,
+      "tv_revenue": 800000,
       "sponsors_owned": [
         {
           "category": "Kit / Apparel",
@@ -994,7 +994,7 @@
           "sponsor_rep_team_id": null
         }
       ],
-      "local_tv_revenue": 0
+      "local_tv_revenue": 690000
     },
     "20": {
       "ticket_revenue": 0,
