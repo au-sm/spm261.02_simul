@@ -1,6 +1,576 @@
 {
-  "applied": [],
+  "applied": [
+    {
+      "proposal_id": "d45d89a0-bb0d-44d4-b464-8d648d709a14",
+      "timestamp": "2026-11-12T17:55:33.498Z",
+      "proposer_team_id": 13,
+      "receiver_team_id": 4,
+      "players_out": [
+        {
+          "id": 98,
+          "name": "Rafael Moreno",
+          "fa": false
+        },
+        {
+          "id": 325,
+          "name": "Igor Bauer",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 383,
+          "name": "Leon Osei",
+          "fa": false
+        },
+        {
+          "id": 291,
+          "name": "Kai Larsson",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "Alex needs a better goalkeeper and in exchange I get a defender. I am in need for a better defense so I need this trade. Giving up midfielders is advantagous because of how many I have currently",
+      "status": "accepted",
+      "responded_at": "2026-11-12T17:56:14.582Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "01be0ffa-e707-410f-8bf5-527615c89f35",
+      "timestamp": "2026-11-12T17:55:45.779Z",
+      "proposer_team_id": 18,
+      "receiver_team_id": 7,
+      "players_out": [
+        {
+          "id": 135,
+          "name": "Nikolai Reyes",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 293,
+          "name": "Nico Vidal",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 30000,
+      "cash_from_receiver": 0,
+      "rationale": "Trade is being conducted due to positions needed.",
+      "status": "accepted",
+      "responded_at": "2026-11-12T17:56:30.548Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "7de74f13-d8fc-4719-bbeb-6bb5b73aa254",
+      "timestamp": "2026-11-12T17:58:46.235Z",
+      "proposer_team_id": 2,
+      "receiver_team_id": 8,
+      "players_out": [
+        {
+          "id": 221,
+          "name": "Stefan Santos",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 88,
+          "name": "Leon Wallin",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 50000,
+      "cash_from_receiver": 50000,
+      "rationale": "just take him",
+      "status": "accepted",
+      "responded_at": "2026-11-12T17:59:38.255Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "314370e1-57ba-49d1-b097-d4233955657c",
+      "timestamp": "2026-11-12T17:59:48.709Z",
+      "proposer_team_id": 12,
+      "receiver_team_id": 6,
+      "players_out": [
+        {
+          "id": 195,
+          "name": "Nico Moreno",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 127,
+          "name": "Igor Petrov",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "I'm giving up a very good defender for one of the leauges best defenders.",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:01:03.866Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "6a4bec13-fb61-4a00-9019-b1e774b67962",
+      "timestamp": "2026-11-12T18:02:22.203Z",
+      "proposer_team_id": 14,
+      "receiver_team_id": 17,
+      "players_out": [
+        {
+          "id": 359,
+          "name": "Kenji Lindqvist",
+          "fa": false
+        },
+        {
+          "id": 386,
+          "name": "Radek Costa",
+          "fa": false
+        },
+        {
+          "id": 117,
+          "name": "Stefan Fischer",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 358,
+          "name": "Felix Costa",
+          "fa": false
+        },
+        {
+          "id": 34,
+          "name": "Amara Reyes",
+          "fa": false
+        },
+        {
+          "id": 348,
+          "name": "Rafael Wallin",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "I feel that this is the most fair trade.",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:02:38.673Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "567dfc47-b894-468b-8863-c42ac5588108",
+      "timestamp": "2026-11-12T18:04:16.217Z",
+      "proposer_team_id": 2,
+      "receiver_team_id": 11,
+      "players_out": [
+        {
+          "id": 382,
+          "name": "Youssef Rossi",
+          "fa": false
+        },
+        {
+          "id": 369,
+          "name": "Tobias Petrov",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 146,
+          "name": "Nikolai Wallin",
+          "fa": false
+        },
+        {
+          "id": 367,
+          "name": "Emil Fischer",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 50000,
+      "cash_from_receiver": 500000,
+      "rationale": "please take them, they are so good and kind :)",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:04:51.876Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "52babfdb-224d-4808-909b-379bc9d2a5ea",
+      "timestamp": "2026-11-12T18:05:24.412Z",
+      "proposer_team_id": 18,
+      "receiver_team_id": 7,
+      "players_out": [
+        {
+          "id": 226,
+          "name": "Enzo Keller",
+          "fa": false
+        },
+        {
+          "id": 308,
+          "name": "Diego Weber",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 314,
+          "name": "Igor Novak",
+          "fa": false
+        },
+        {
+          "id": 305,
+          "name": "Yusuf Lindqvist",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "Trade for positions",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:06:08.551Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "998e42e5-6031-4bc0-b604-7d09eeac594f",
+      "timestamp": "2026-11-12T18:06:51.397Z",
+      "proposer_team_id": 11,
+      "receiver_team_id": 8,
+      "players_out": [
+        {
+          "id": 363,
+          "name": "Rui Ivanov",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 196,
+          "name": "Adrian Bauer",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "take it i have to",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:07:51.247Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "b03b4cef-7c24-4016-b5e3-3f412e28cef2",
+      "timestamp": "2026-11-12T18:07:37.861Z",
+      "proposer_team_id": 6,
+      "receiver_team_id": 19,
+      "players_out": [
+        {
+          "id": 334,
+          "name": "Leon Nowak",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 225,
+          "name": "Hassan Petrov",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "here",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:08:36.138Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "d9777bc6-1738-4ad6-9fcc-76e98eac965b",
+      "timestamp": "2026-11-12T18:09:28.051Z",
+      "proposer_team_id": 6,
+      "receiver_team_id": 16,
+      "players_out": [
+        {
+          "id": 159,
+          "name": "Enzo Mensah",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 327,
+          "name": "Nikolai Nowak",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "easy trade",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:09:47.523Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    },
+    {
+      "proposal_id": "8798289e-4054-4399-81dc-dcdf8eee4461",
+      "timestamp": "2026-11-12T18:10:31.721Z",
+      "proposer_team_id": 9,
+      "receiver_team_id": 1,
+      "players_out": [
+        {
+          "id": 111,
+          "name": "Leon Santos",
+          "fa": false
+        }
+      ],
+      "players_in": [
+        {
+          "id": 232,
+          "name": "Lars Braga",
+          "fa": false
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 4000000,
+      "rationale": "Entering rebuild. Getting some serious money back for my best player. Wishing Leon and his family the best of luck the rest of the season.",
+      "status": "accepted",
+      "responded_at": "2026-11-12T18:11:37.280Z",
+      "applied_at": "2026-11-12",
+      "session": 0
+    }
+  ],
   "voided": [],
-  "team_trade_count": {},
-  "team_cash_net": {}
+  "team_trade_count": {
+    "13": 2,
+    "4": 2,
+    "18": 3,
+    "7": 3,
+    "2": 3,
+    "8": 2,
+    "12": 1,
+    "6": 3,
+    "14": 3,
+    "17": 3,
+    "11": 3,
+    "19": 1,
+    "16": 1,
+    "9": 1,
+    "1": 1
+  },
+  "team_cash_net": {
+    "13": 0,
+    "4": 0,
+    "18": -30000,
+    "7": 30000,
+    "2": 450000,
+    "8": 0,
+    "12": 0,
+    "6": 0,
+    "14": 0,
+    "17": 0,
+    "11": -450000,
+    "19": 0,
+    "16": 0,
+    "9": 4000000,
+    "1": -4000000
+  },
+  "session_trade_count": {
+    "0": {
+      "13": 2,
+      "4": 2,
+      "18": 3,
+      "7": 3,
+      "2": 3,
+      "8": 2,
+      "12": 1,
+      "6": 3,
+      "14": 3,
+      "17": 3,
+      "11": 3,
+      "19": 1,
+      "16": 1,
+      "9": 1,
+      "1": 1
+    }
+  },
+  "waiver_queue": [
+    {
+      "proposal_id": "10638446-66e6-4a5e-ab3d-018439a834d5",
+      "proposer_team_id": 13,
+      "players_in": [
+        {
+          "id": 302,
+          "name": "Nikolai Costa",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "8d5986cc-302e-428d-8611-ea6e13cb0a6b",
+      "proposer_team_id": 6,
+      "players_in": [
+        {
+          "id": 261,
+          "name": "Sven Keller",
+          "fa": true
+        },
+        {
+          "id": 289,
+          "name": "Tobias Sokol",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "e1dd3025-1b3c-476b-8712-102b2b633cc1",
+      "proposer_team_id": 15,
+      "players_in": [
+        {
+          "id": 227,
+          "name": "Omar Malik",
+          "fa": true
+        },
+        {
+          "id": 250,
+          "name": "Bruno Malik",
+          "fa": true
+        },
+        {
+          "id": 277,
+          "name": "Cesar Adamu",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "5c76303f-198d-47cd-81bb-5ae8dbaac1fa",
+      "proposer_team_id": 11,
+      "players_in": [
+        {
+          "id": 84,
+          "name": "Tomas Sato",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "2594b7a7-8b93-48fc-9d68-6cedce1a9a3a",
+      "proposer_team_id": 2,
+      "players_in": [
+        {
+          "id": 106,
+          "name": "Radek Novak",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "bcf0cac2-3574-4462-85dd-1263a39410ce",
+      "proposer_team_id": 0,
+      "players_in": [
+        {
+          "id": 370,
+          "name": "Milan Bauer",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "590bae96-9641-4afe-81e2-0500fb349434",
+      "proposer_team_id": 0,
+      "players_in": [
+        {
+          "id": 168,
+          "name": "Rafael Malik",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "40eb8bc4-e365-4c96-9675-96417612efd4",
+      "proposer_team_id": 0,
+      "players_in": [
+        {
+          "id": 156,
+          "name": "Yusuf Suarez",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "09859dce-e85d-4385-a4ee-b1539b04438e",
+      "proposer_team_id": 1,
+      "players_in": [
+        {
+          "id": 104,
+          "name": "Amara Ferreira",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "2668a585-5b08-4a3c-b07c-603c7e2340bc",
+      "proposer_team_id": 8,
+      "players_in": [
+        {
+          "id": 56,
+          "name": "Pavel Larsson",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "1321a960-2482-49e1-a1ea-c221bcd295df",
+      "proposer_team_id": 4,
+      "players_in": [
+        {
+          "id": 328,
+          "name": "Nico Sokol",
+          "fa": true
+        }
+      ]
+    },
+    {
+      "proposal_id": "9095b9cc-0a93-433a-83df-bdda6b41046a",
+      "proposer_team_id": 10,
+      "players_in": [
+        {
+          "id": 147,
+          "name": "Ivan Osei",
+          "fa": true
+        }
+      ]
+    }
+  ],
+  "waiver_priority": [
+    9,
+    3,
+    13,
+    5,
+    12,
+    16,
+    6,
+    7,
+    15,
+    18,
+    19,
+    17,
+    11,
+    2,
+    0,
+    1,
+    8,
+    4,
+    10,
+    14
+  ]
 }
