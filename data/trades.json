@@ -926,7 +926,29 @@
       "10": 1
     }
   },
-  "waiver_queue": [],
+  "waiver_queue": [
+    {
+      "proposal_id": "2d1b4b84-dcc3-4675-8ea7-946f880cd464",
+      "proposer_team_id": 5,
+      "players_in": [
+        {
+          "id": 37,
+          "name": "Emil Barros",
+          "fa": true
+        },
+        {
+          "id": 285,
+          "name": "Lars Neumann",
+          "fa": true
+        },
+        {
+          "id": 267,
+          "name": "Enzo Neumann",
+          "fa": true
+        }
+      ]
+    }
+  ],
   "waiver_priority": [
     9,
     3,
