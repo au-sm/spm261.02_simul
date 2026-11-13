@@ -889,7 +889,24 @@
       "10": 1
     }
   },
-  "waiver_queue": [],
+  "waiver_queue": [
+    {
+      "proposal_id": "005dba2b-a40f-475f-9559-8ee2cdedf82d",
+      "proposer_team_id": 12,
+      "players_in": [
+        {
+          "id": 375,
+          "name": "Tomas Diallo",
+          "fa": true
+        },
+        {
+          "id": 176,
+          "name": "Tomas Sokol",
+          "fa": true
+        }
+      ]
+    }
+  ],
   "waiver_priority": [
     9,
     3,
