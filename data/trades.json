@@ -928,6 +928,22 @@
   },
   "waiver_queue": [
     {
+      "proposal_id": "52eac2c8-cc7b-4fb9-9c1e-c8b0c96dd96a",
+      "proposer_team_id": 9,
+      "players_in": [
+        {
+          "id": 62,
+          "name": "Adrian Silva",
+          "fa": true
+        },
+        {
+          "id": 364,
+          "name": "Sami Krause",
+          "fa": true
+        }
+      ]
+    },
+    {
       "proposal_id": "2d1b4b84-dcc3-4675-8ea7-946f880cd464",
       "proposer_team_id": 5,
       "players_in": [
