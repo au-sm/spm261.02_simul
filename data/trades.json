@@ -636,6 +636,43 @@
       "responded_at": "2026-11-12T18:04:10.121Z",
       "applied_at": "2026-11-13",
       "session": 0
+    },
+    {
+      "proposal_id": "005dba2b-a40f-475f-9559-8ee2cdedf82d",
+      "timestamp": "2026-11-13T01:33:00.608Z",
+      "proposer_team_id": 12,
+      "receiver_team_id": "",
+      "players_out": [
+        {
+          "id": 79,
+          "name": "Andre Keller",
+          "fa": true
+        },
+        {
+          "id": 9,
+          "name": "Radek Barros",
+          "fa": true
+        }
+      ],
+      "players_in": [
+        {
+          "id": 375,
+          "name": "Tomas Diallo",
+          "fa": true
+        },
+        {
+          "id": 176,
+          "name": "Tomas Sokol",
+          "fa": true
+        }
+      ],
+      "cash_from_proposer": 0,
+      "cash_from_receiver": 0,
+      "rationale": "I\u2019m trying to improve my midfield and defense and because I just got a goalkeeper I can get rid of my 3rd.",
+      "status": "accepted",
+      "responded_at": "2026-11-13T01:33:00.608Z",
+      "applied_at": "2026-11-13",
+      "session": 0
     }
   ],
   "voided": [
@@ -837,7 +874,7 @@
     "7": 3,
     "2": 3,
     "8": 3,
-    "12": 1,
+    "12": 3,
     "6": 3,
     "14": 3,
     "17": 3,
@@ -875,7 +912,7 @@
       "7": 3,
       "2": 3,
       "8": 3,
-      "12": 1,
+      "12": 3,
       "6": 3,
       "14": 3,
       "17": 3,
@@ -889,24 +926,7 @@
       "10": 1
     }
   },
-  "waiver_queue": [
-    {
-      "proposal_id": "005dba2b-a40f-475f-9559-8ee2cdedf82d",
-      "proposer_team_id": 12,
-      "players_in": [
-        {
-          "id": 375,
-          "name": "Tomas Diallo",
-          "fa": true
-        },
-        {
-          "id": 176,
-          "name": "Tomas Sokol",
-          "fa": true
-        }
-      ]
-    }
-  ],
+  "waiver_queue": [],
   "waiver_priority": [
     9,
     3,

@@ -7,7 +7,7 @@ player_id,name,position,age,att,def,pace,phy,ovr,star_power,salary,team_id
 6,Nikolai Suarez,DF,32,57,65,64,80,65,40,635000,7
 7,Milan Novak,FW,32,76,48,67,48,60,43,647000,3
 8,Stefan Lindqvist,MF,23,64,50,91,67,65,48,838000,1
-9,Radek Barros,MF,33,61,61,49,64,59,59,662000,12
+9,Radek Barros,MF,33,61,61,49,64,59,59,662000,
 10,Kai Ivanov,DF,27,35,63,61,56,52,62,627000,
 11,Bruno Haddad,DF,21,35,61,60,75,55,65,772000,
 12,Amara Krause,FW,21,89,48,65,62,67,78,972000,8
@@ -77,7 +77,7 @@ player_id,name,position,age,att,def,pace,phy,ovr,star_power,salary,team_id
 76,Felix Krause,DF,22,45,86,74,70,68,60,810000,7
 77,Andre Suarez,FW,30,66,50,92,82,68,72,1041000,18
 78,Radek Braga,DF,28,57,70,69,83,68,64,872000,8
-79,Andre Keller,GK,23,34,72,47,68,55,63,755000,12
+79,Andre Keller,GK,23,34,72,47,68,55,63,755000,
 80,Jonas Petrov,FW,29,82,29,60,54,56,69,904000,11
 81,Diego Novak,FW,20,72,37,69,80,62,61,859000,17
 82,Yusuf Silva,GK,21,34,75,55,88,61,58,766000,16
@@ -174,7 +174,7 @@ player_id,name,position,age,att,def,pace,phy,ovr,star_power,salary,team_id
 173,Idris Krause,DF,32,35,65,92,66,60,74,961000,5
 174,Tobias Bauer,MF,34,68,55,77,77,67,65,945000,2
 175,Adrian Horvat,MF,29,54,64,77,53,61,53,683000,19
-176,Tomas Sokol,MF,19,61,47,78,79,63,62,803000,
+176,Tomas Sokol,MF,19,61,47,78,79,63,62,803000,12
 177,Enzo Ferreira,DF,23,53,66,59,66,61,74,966000,18
 178,Kofi Weber,MF,25,67,52,64,75,63,80,885000,1
 179,Tariq Sato,MF,20,66,69,79,92,74,82,1084000,10
@@ -373,7 +373,7 @@ player_id,name,position,age,att,def,pace,phy,ovr,star_power,salary,team_id
 372,Rui Adamu,DF,30,57,67,77,80,68,78,817000,19
 373,Lars Horvat,FW,21,87,34,94,64,67,55,846000,16
 374,Enzo Moreno,FW,32,80,40,71,88,67,63,935000,15
-375,Tomas Diallo,FW,32,73,39,80,80,65,63,740000,
+375,Tomas Diallo,FW,32,73,39,80,80,65,63,740000,12
 376,Sami Almeida,MF,21,56,50,83,54,59,72,759000,0
 377,Nikolai Mensah,MF,25,63,67,80,75,70,76,1050000,19
 378,Omar Rossi,DF,34,47,81,95,86,74,50,1000000,10
