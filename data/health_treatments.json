@@ -385,14 +385,62 @@
    "treatment": "recovery",
    "submitted_at": "2026-11-04T03:41:12.252Z",
    "cost": 50000
+  },
+  {
+   "id": "6|7|41|2026-11-17T17:54:41.019Z",
+   "team_id": "6",
+   "round": 7,
+   "player_id": "41",
+   "player_name": "Rafael Barros",
+   "treatment": "rehab_accelerated",
+   "submitted_at": "2026-11-17T17:54:41.019Z",
+   "injured_until_before": 7,
+   "injured_until_after": 5,
+   "cost": 200000
+  },
+  {
+   "id": "6|7|327|2026-11-17T17:54:54.918Z",
+   "team_id": "6",
+   "round": 7,
+   "player_id": "327",
+   "player_name": "Nikolai Nowak",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-11-17T17:54:54.918Z",
+   "injured_until_before": 9,
+   "injured_until_after": 8,
+   "cost": 75000
+  },
+  {
+   "id": "19|7|224|2026-11-17T17:55:12.523Z",
+   "team_id": "19",
+   "round": 7,
+   "player_id": "224",
+   "player_name": "Igor Krause",
+   "treatment": "rehab_standard",
+   "submitted_at": "2026-11-17T17:55:12.523Z",
+   "injured_until_before": 7,
+   "injured_until_after": 6,
+   "cost": 75000
+  },
+  {
+   "id": "11|7|152|2026-11-17T17:55:58.636Z",
+   "team_id": "11",
+   "round": 7,
+   "player_id": "152",
+   "player_name": "Enzo Rossi",
+   "treatment": "rehab_elite",
+   "submitted_at": "2026-11-17T17:55:58.636Z",
+   "injured_until_before": 8,
+   "injured_until_after": 6,
+   "cost": 375000
   }
  ],
  "voided": [],
  "team_spend": {
   "2": 250000,
-  "6": 350000,
+  "6": 625000,
   "16": 150000,
-  "11": 275000,
+  "11": 650000,
   "5": 75000,
   "8": 75000,
   "10": 275000,
@@ -400,7 +448,7 @@
   "17": 1500000,
   "7": 125000,
   "4": 50000,
-  "19": 75000,
+  "19": 150000,
   "1": 50000
  },
  "boosts": {
@@ -476,6 +524,11 @@
    },
    "336": {
     "levels": 1
+   }
+  },
+  "7": {
+   "152": {
+    "set": "Average"
    }
   }
  }
